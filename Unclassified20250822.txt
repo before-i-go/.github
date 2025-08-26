@@ -1,3 +1,16 @@
+Maybe this repo is for my kids(s)
+
+will they ever read it, that I may never know
+
+
+
+
+
+
+========================================================
+
+
+
 git remote add origin https://github.com/before-i-go/.github.git
 git branch -M main
 git push -u origin main
