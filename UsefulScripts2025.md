@@ -35,7 +35,7 @@ src="/home/amuldotexe/Documents"
 dest="/home/amuldotexe/Desktop/before-I-go/.github/JsonFiles202508"
 mkdir -p "$dest"
 ts=$(date +%Y%m%d_%H%M%S)
-out="$dest/summary_${ts}_start.md"
+out="$dest/summary_${ts}_start.txt"
 
 declare -A seen
 tmpdir="$(mktemp -d)"
@@ -86,15 +86,14 @@ while IFS= read -r -d "" f; do
   seen[$h]=1
   {
     printf "\n---\n\n### File: %s\n\n" "$f"
-    printf "~~~text\n"
     cat -- "$tmp"
-    printf "\n~~~\n"
+    printf "\n"
   } >> "$out"
   ((count++))
 done < <(
   find "$src" \
     \( -path "$dest" -o -path "$dest/*" \) -prune -o \
-    -type f \( -iname "*.md" -o -name "*trunc*.json" -o -iname "*.txt" -o -iname "*.docx" \) -print0 2>/dev/null
+    -type f \( -iname "*Rust*.md" -o -iname "*trun*.json" -o -iname "*.docx" \) -print0 2>/dev/null
 )
 
 {
