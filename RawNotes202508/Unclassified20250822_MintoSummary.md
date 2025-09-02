@@ -1,6 +1,6 @@
 # Unclassified20250822 — Minto Pyramid Master Table
 
-Coverage: lines processed so far 1–66000 (reprocessed 60000–64249 in strict 250‑line windows; merges applied where relevant; next window 64250–64499).
+Coverage: lines processed so far 1–66000 (reprocessed 60000–64749 in strict 250‑line windows; merges applied where relevant; next window 64750–64999).
 
 | Level | Category | Item | Core Idea (Principle) | When to Use | Pitfalls / Anti‑Patterns | Metrics / Signals | High‑Value Keywords |
 |---|---|---|---|---|---|---|---|
@@ -219,6 +219,10 @@ Coverage: lines processed so far 1–66000 (reprocessed 60000–64249 in strict 
 | Reference | Nutrition | Mediterranean Diet | Anti‑inflammatory dietary pattern supports vagal function and HRV via lower IL‑6/CRP. | Long‑term autonomic health; cardiometabolic risk. | Adherence drift; UPFs creep. | IL‑6↓; CRP↓; HRV↑ | Mediterranean, olive oil, anti‑inflammatory |
 | Reference | Metabolic | Glycemic Control | Stable glucose/insulin preserves vagal function; poor control lowers HRV. | T1D/T2D risk; high HbA1c; metabolic syndrome. | Restriction without supervision; rebound. | HbA1c↓; SDNN/RMSSD↑ | glycemic index, insulin resistance, HRV |
 | Decision | Recovery | Alcohol Suppresses HRV | Even ~2 drinks acutely reduce HRV and raise HR; avoid near sleep and during recovery phases. | Evenings; pre‑sleep; training blocks. | Underestimating dose/timing; “just one” bias. | HR↑; total HRV↓; HF↓; LF/HF↑ | alcohol, HRV suppression |
+| Pattern | Circadian | Morning Bright Light (Anchor) | 20–30 min of morning bright light stabilizes circadian rhythm and improves nocturnal HRV. | Within 1–2h after waking; mood/energy drift. | Overcast needs longer; indoor lux too low. | Morning light minutes; nocturnal HF power↑ | morning light, circadian anchor, zeitgeber |
+| Pattern | Sleep | Thermoregulation for Sleep | Pre‑bed warm bath/shower plus cool bedroom supports sleep onset and higher nocturnal HRV. | 1–3h pre‑bed; high sleep latency. | Too hot/too close to bedtime; overheating. | Sleep latency↓; nocturnal HRV↑ | thermoregulation, warm bath, cool room |
+| Pattern | Nature | Forest Bathing (Shinrin‑yoku) | Slow, sensory immersion in nature lowers cortisol/EDA and raises HRV. | Stress recovery; weekend routines. | Allergens; weather; access constraints. | sCort↓; EDA↓; HRV↑ | forest bathing, shinrin‑yoku, HRV |
+| Reference | Environment | Open‑Office Acoustic Quality | Apply ISO 22955/RT60 guidance to reduce cognitive load and stress in shared spaces. | Office/classroom design; retrofits. | Over‑reverberant rooms; poor masking strategy. | RT60 targets; background dBA; STI | ISO 22955, RT60, acoustics |
 | Pattern | Virtualization | Virtio Audio IPC Bridge | Transport DSP audio IPC (mailbox/doorbell) over virtio queues between guest and host. | Virtualized audio stacks; multi‑OS hosts/guests. | Sync/clock drift; buffer underruns; device‑specific ops. | xrun rate; latency/jitter; queue depth | virtio‑audio, SOF, IPC, mailbox, doorbell |
 | Pattern | Drivers | Spec‑Driven Driver Synthesis | Generate drivers from formal device and OS interface specs to enable cross‑OS reuse and safety. | Multi‑OS targets; safety; rapid enablement. | Spec drift; perf overhead; glue code complexity. | Reuse % across OS; bug rate; perf delta vs native | driver synthesis, device DSL, Devil |
 | Reference | Drivers | Device DSLs (e.g., Devil) | High‑level, strongly‑typed languages to model device interfaces and auto‑generate safe driver code. | Driver modeling; verification; portability. | Expressiveness gaps; toolchain maturity. | Spec coverage; compile/runtime errors; verification results | Devil DSL, device spec, verification |
