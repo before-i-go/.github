@@ -72,6 +72,7 @@ This document describes the exact method used to turn very large notes into one 
 ## Quality Gates
 
 - Bold: Coverage: track processed line range (e.g., “1–N processed”). Only bump coverage after actually completing all 250‑line windows up to N.
+- Bold: Per‑Window Updates: update the coverage marker after every 250‑line window is processed (even if no new rows are added). Include the last fully processed window and the next window start (e.g., “reprocessed 60000–63499; next window 63500–63749”).
 - Bold: Remediation: if any non-windowed scan was used, re-process that range in 250‑line windows before updating coverage.
 - Bold: Consistency: consistent tone, schema, and taxonomy
 - Bold: Uniqueness: do not add near‑duplicates; enrich existing rows
