@@ -13,7 +13,7 @@ Method Adherence Checklist
 
 # Unclassified20250822 — Minto Pyramid Master Table
 
-Coverage: lines processed so far 1–66000 (reprocessed 60000–64999 in strict 250‑line windows; merges applied where relevant; next window 65000–65249).
+Coverage: processed lines 1–500 from byte 65000.
 
 | Level | Category | Item | Core Idea (Principle) | When to Use | Pitfalls / Anti‑Patterns | Metrics / Signals | High‑Value Keywords |
 |---|---|---|---|---|---|---|---|
@@ -431,3 +431,38 @@ Coverage: lines processed so far 1–66000 (reprocessed 60000–64999 in strict 
 
 
 
+
+
+
+Minto Pyramid Summary — Unclassified20250822 (from byte 65000)
+
+Coverage: processed lines 1–500 from byte 65000.
+| Level | Category | Item | Core Idea | When to Use | Pitfalls / Anti-Patterns | Metrics / Signals | Keywords |
+|-|-|-|-|-|-|-|-|
+| Answer | Platform | Operating Model | Build reliable, secure systems via observability, incident learning, and DevSecOps. | Complex distributed systems at scale. | Tool-only focus; ignoring culture/process. | SLO burn; incident MTTR; vuln backlog | SRE, DevSecOps |
+| Pillar | Reliability | Observability | Metrics, logs, traces give end-to-end understanding; alert on SLOs. | Debugging, performance analysis, user impact. | Noisy, non-actionable alerts; missing trace links. | p95 latency, error rate, saturation | Metrics, Logs, Traces, SLOs |
+| Pillar | Delivery/Ops | Blameless Postmortems | Learn from incidents; fix systems, not people. | Any incident-driven improvement loop. | Blame culture; no follow-through on actions. | Action item completion; repeat-incident rate | Postmortems, Incident Response |
+| Pillar | Security | DevSecOps | Integrate security across SDLC; secure supply chain. | Regulated or internet-exposed systems. | Secrets in code; privilege creep; unsigned builds. | SBOM coverage; signed builds; vuln MTTR | DevSecOps, SBOM, SLSA |
+| Security | Architecture | Zero Trust | Never trust; always verify; least privilege and segmentation. | Access to internal/external resources. | Implicit trust zones; broad network access. | mTLS coverage; denied-by-default rate | Zero Trust, IAM, mTLS |
+| Security | Governance | Least Privilege (PoLP) | Grant only minimum permissions, review regularly. | All identities and services. | Wildcard grants; stale access. | Access review pass rate | Least Privilege, IAM |
+| Decision | Threat Analysis | Threat Modeling | Identify threats early using STRIDE/PASTA; set controls. | Design phase; major changes. | Superficial exercises; untracked mitigations. | Mitigation completion; residual risk | STRIDE, PASTA |
+
+
+Minto Pyramid Summary — Window starting @65000 (lines 1–250)
+
+| Level | Category | Item | Core Idea | When to Use | Pitfalls / Anti-Patterns | Metrics / Signals | Keywords |
+| - | - | - | - | - | - | - | - |
+| Pillar | Reliability | Observability | Metrics, logs, traces with SLO-aligned alerting. | Debugging and performance in distributed systems. | Cardinality explosion; alert fatigue; no trace linkage. | p95 latency; error rate; saturation; alert precision | Metrics, Logs, Traces, SLOs |
+| Pillar | Delivery/Ops | Blameless Postmortems | Learn from incidents; fix systems not people. | After incidents; continuous improvement. | Blame culture; no follow-up on actions. | Repeat incident rate; action item closure | Postmortems, Incident Response |
+| Pillar | Security | DevSecOps | Embed security across SDLC; secure provenance. | Any production software delivery. | Unsigned artifacts; secrets in code; privilege creep. | Signed-build coverage; SBOM completeness; vuln MTTR | DevSecOps, SBOM, SLSA |
+| Security | Architecture | Zero Trust | Never trust; always verify; least privilege. | Internal/external access to resources. | Implicit trust zones; flat networks. | mTLS coverage; denied-by-default rate | Zero Trust, IAM, mTLS |
+| Security | Governance | Least Privilege (PoLP) | Grant only minimum permissions; review regularly. | All identities/services. | Wildcard grants; stale access. | Access review pass rate; denied by default | Least Privilege, IAM |
+| Decision | Threat Analysis | Threat Modeling | Identify threats early and plan mitigations. | Design phase and major changes. | Checklist theater; untracked mitigations. | Mitigation completion; residual risk trend | STRIDE, PASTA |
+
+
+Minto Pyramid Summary — Window @65000 (lines 251–500)
+
+| Level | Category | Item | Core Idea | When to Use | Pitfalls / Anti-Patterns | Metrics / Signals | Keywords |
+| - | - | - | - | - | - | - | - |
+| Pattern | Integration | API Gateway | Single entry; route/aggregate; enforce cross-cutting concerns. | Client-to-many services; external exposure. | Bottleneck; SPOF; overstuffed logic. | Gateway latency; error rate; policy hits | API Gateway, BFF |
+| Pattern | Data Consistency | Saga | Coordinate local transactions with compensations. | Cross-service workflows without 2PC. | Debug complexity; partial failure handling. | Compensation success; rollback rate | Saga, Orchestration, Choreography |
