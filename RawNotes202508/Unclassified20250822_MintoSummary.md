@@ -1,3 +1,16 @@
+# Method Adherence Checklist
+Method Adherence Checklist
+
+- Chunked windows: Read in strict 250-line windows from start to EOF; no large-range scans used for extraction.
+- Coverage tracking: Coverage marker only advanced after fully processing all windows up to that line; current marker reset to 1–62250 to resume from 60000 and reprocess forward.
+- Single artifact: Produced one cohesive master table without per-window notes or labels.
+- Normalization: Canonicalized item names; merged synonyms (e.g., write‑back≈write‑behind; pranayama terms); avoided duplicates by enriching existing rows.
+- Classification: Mapped each item into Level, Category, Item, Core Idea, When, Pitfalls, Metrics, Keywords with concise one‑liners.
+- Evidence cues: Prioritized JSON-like keys and domain lexicon mentions (patterns/pranayama/HRV/VR/driver frameworks) per heuristics.
+- Keyword curation: Short, high-signal, deduped, lowercase/trimmed lists to aid retrieval.
+- Quality gates: Consistent tone/taxonomy; relevance checked against source; no near-duplicates added; metrics are observable (e.g., p95, RMSSD, LF/HF).
+
+
 # Unclassified20250822 — Minto Pyramid Master Table
 
 Coverage: lines processed so far 1–66000 (reprocessed 60000–64999 in strict 250‑line windows; merges applied where relevant; next window 65000–65249).
@@ -325,21 +338,7 @@ Coverage: lines processed so far 1–66000 (reprocessed 60000–64999 in strict 
 | Strategy | Platforms | Paravirtual Standards (VirtIO) | Use VirtIO/virtgpu to standardize device classes across hypervisors, trading some native perf for portability. | Cloud/VM targets; early OS bring‑up. | Feature gaps; GPU complexity. | Guest support breadth; perf vs native | VirtIO, virtgpu, SR‑IOV |
 | Strategy | Platforms | Universal Driver DSL/IDL | Specify device protocols in a typed DSL to generate safe driver libraries; enable verification and codegen (in C/Rust). | New driver development; portability. | Spec drift; tooling maturity. | Bug density vs C; spec coverage | Devil DSL, Rathaxes, IDL |
 | Reference | Standards | Firmware/Discovery Interfaces | Leverage ACPI/Device Tree/UEFI to describe hardware; consume stable user‑space/syscall ABIs. | Cross‑platform discovery; HAL boundary. | Misconfigured tables; vendor quirks. | Device match rate; boot logs clean | ACPI, Device Tree, UEFI |
-
 | Reference | Evidence | RF vs Generic Slow Breathing | Individual resonance frequency training outperforms generic slow breathing for RSA/BRS and BP reduction in some cohorts; step test 6.5→4.5 bpm to find RF. | HRVB; pre‑hypertension. | Assuming 0.1 Hz fits all; overfitting. | BRS gain; RSA amplitude; BP | resonance frequency, RF test |
-
----
-
-Method Adherence Checklist
-
-- Chunked windows: Read in strict 250-line windows from start to EOF; no large-range scans used for extraction.
-- Coverage tracking: Coverage marker only advanced after fully processing all windows up to that line; current marker reset to 1–62250 to resume from 60000 and reprocess forward.
-- Single artifact: Produced one cohesive master table without per-window notes or labels.
-- Normalization: Canonicalized item names; merged synonyms (e.g., write‑back≈write‑behind; pranayama terms); avoided duplicates by enriching existing rows.
-- Classification: Mapped each item into Level, Category, Item, Core Idea, When, Pitfalls, Metrics, Keywords with concise one‑liners.
-- Evidence cues: Prioritized JSON-like keys and domain lexicon mentions (patterns/pranayama/HRV/VR/driver frameworks) per heuristics.
-- Keyword curation: Short, high-signal, deduped, lowercase/trimmed lists to aid retrieval.
-- Quality gates: Consistent tone/taxonomy; relevance checked against source; no near-duplicates added; metrics are observable (e.g., p95, RMSSD, LF/HF).
 | Practice | Meditation | Ajapa Japa (So'ham) | Synchronize “so” with inhale and “ham” with exhale to steady attention and calm the autonomic system. | Breath‑linked mantra meditation. | Forcing cadence; breath strain. | Session duration; calm rating; breath synchrony | ajapa japa, so‑ham |
 | Practice | Meditation | Japa Modalities | Vācika (aloud), Upāṁśu (whisper), Mānasa (mental); select mode to match context and depth. | Solo/group mantra practice. | Vocal fatigue; mind wandering. | Minutes/day; consistency; perceived depth | japa modes, mantra practice |
 | Practice | Meditation | Mala Counting (108) | Use a mala to count 108 repetitions; stop at guru bead; supports focus and session structure. | Japa sessions; habit scaffolding. | Over‑fixation on counts; losing meaning. | Repetitions/session; consistency | mala, 108, guru bead |
@@ -420,3 +419,15 @@ Method Adherence Checklist
 | Program | Rest | Yoga Nidra Dosage | 11–50 min sessions, daily to multi‑month, improve sleep quality and reduce stress/sleepiness; midday NSDR supports dopamine/cortisol reset. | Sleep support; stress recovery. | Falling asleep; inconsistent scripts. | Sleep quality; daytime sleepiness; cortisol | yoga nidra, NSDR dosage |
 | Program | Breathwork | High‑Dose Slow Breathing | Dose–response seen with ≥45 min/day in some contexts (e.g., inflammatory markers); increase duration progressively. | Clinical recovery; inflammation. | Adherence burden; fatigue. | Minutes/day; IL‑6 change; perceived benefit | slow breathing dose, ≥45 min |
 | Decision | Technique | Breath Ratio Priority | Ratios (E>I vs E=I) matter less than maintaining slow, comfortable cadence; prioritize resonance pacing. | General breathwork design. | Forcing holds; strain. | Stress reduction; adherence; HRV change | breath ratio, cadence priority |
+
+
+
+
+
+
+
+
+
+
+
+
