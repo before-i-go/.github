@@ -1,6 +1,6 @@
 # Unclassified20250822 — Minto Pyramid Master Table
 
-Coverage: lines processed so far 1–66000 (reprocessed 60000–64749 in strict 250‑line windows; merges applied where relevant; next window 64750–64999).
+Coverage: lines processed so far 1–66000 (reprocessed 60000–64999 in strict 250‑line windows; merges applied where relevant; next window 65000–65249).
 
 | Level | Category | Item | Core Idea (Principle) | When to Use | Pitfalls / Anti‑Patterns | Metrics / Signals | High‑Value Keywords |
 |---|---|---|---|---|---|---|---|
@@ -223,6 +223,9 @@ Coverage: lines processed so far 1–66000 (reprocessed 60000–64749 in strict 
 | Pattern | Sleep | Thermoregulation for Sleep | Pre‑bed warm bath/shower plus cool bedroom supports sleep onset and higher nocturnal HRV. | 1–3h pre‑bed; high sleep latency. | Too hot/too close to bedtime; overheating. | Sleep latency↓; nocturnal HRV↑ | thermoregulation, warm bath, cool room |
 | Pattern | Nature | Forest Bathing (Shinrin‑yoku) | Slow, sensory immersion in nature lowers cortisol/EDA and raises HRV. | Stress recovery; weekend routines. | Allergens; weather; access constraints. | sCort↓; EDA↓; HRV↑ | forest bathing, shinrin‑yoku, HRV |
 | Reference | Environment | Open‑Office Acoustic Quality | Apply ISO 22955/RT60 guidance to reduce cognitive load and stress in shared spaces. | Office/classroom design; retrofits. | Over‑reverberant rooms; poor masking strategy. | RT60 targets; background dBA; STI | ISO 22955, RT60, acoustics |
+| Pattern | Environment | Indoor Plants (Biophilic Interaction) | Hands‑on interaction with indoor plants suppresses SNS activity and lowers DBP; improves calm. | Breaks; office/home setups. | Allergies; mess; inconsistent care. | DBP↓; SNS markers↓; perceived calm↑ | biophilic, indoor plants, SNS |
+| Pattern | Emotion | Awe Practices | Brief awe exposures (nature/art/music) raise vagal tone and reduce sympathetic activation. | Mood reset; team rituals; burnout. | Overstimulating content; accessibility. | HF‑HRV↑; perceived awe↑ | awe, vagal tone, nature, art |
+| Reference | Metrics | Vagal Efficiency (VE) | VE relates RSA amplitude to HR change as a measure of vagal control; use alongside RMSSD/RSA. | Advanced interpretation; biofeedback programs. | Protocol sensitivity; analysis rigor. | VE with RMSSD/RSA | vagal efficiency, RSA, heart rate |
 | Pattern | Virtualization | Virtio Audio IPC Bridge | Transport DSP audio IPC (mailbox/doorbell) over virtio queues between guest and host. | Virtualized audio stacks; multi‑OS hosts/guests. | Sync/clock drift; buffer underruns; device‑specific ops. | xrun rate; latency/jitter; queue depth | virtio‑audio, SOF, IPC, mailbox, doorbell |
 | Pattern | Drivers | Spec‑Driven Driver Synthesis | Generate drivers from formal device and OS interface specs to enable cross‑OS reuse and safety. | Multi‑OS targets; safety; rapid enablement. | Spec drift; perf overhead; glue code complexity. | Reuse % across OS; bug rate; perf delta vs native | driver synthesis, device DSL, Devil |
 | Reference | Drivers | Device DSLs (e.g., Devil) | High‑level, strongly‑typed languages to model device interfaces and auto‑generate safe driver code. | Driver modeling; verification; portability. | Expressiveness gaps; toolchain maturity. | Spec coverage; compile/runtime errors; verification results | Devil DSL, device spec, verification |
