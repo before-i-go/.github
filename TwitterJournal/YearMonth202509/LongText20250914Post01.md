@@ -9,3 +9,18 @@ This is further fueled by the marking scheme in mathematics which is not at par 
 
 This is my hypothesis, I could be wrong, feel free to share your opinion
 ```
+
+## Prompts discovered while coding via LLMs
+
+``` text
+Are these docs in sync with each other: 
+requirements. md ➡️
+architecture. md ➡️ 
+architecture-L2. md ➡️ 
+design. md ➡️ 
+tasks. md
+
+earlier docs being the governing rules - priority highest
+
+
+```
