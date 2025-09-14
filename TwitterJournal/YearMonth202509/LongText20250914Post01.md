@@ -24,3 +24,35 @@ earlier docs being the governing rules - priority highest
 
 
 ```
+### TIL Github does not index your repo unless you search at least once
+
+The image shows a modal stating:
+
+> that-in-rust/campfire-on-rust is not indexed yet  
+> This repository can't be accessed by ChatGPT until it's indexed by GitHub. You can trigger indexing by searching the repository's code on GitHub. After about 5–10 minutes, you can use it in ChatGPT.  
+> [Trigger indexing on GitHub]
+
+**What this means:**  
+GitHub repositories must be indexed for features like ChatGPT code search or Copilot Chat to work. If a repo isn't indexed, ChatGPT can't access its code.
+
+**How to trigger indexing:**  
+1. **Click "Trigger indexing on GitHub"**  
+   - This button usually opens the repository's code search page on GitHub.
+   - Alternatively, you can manually go to the repository on GitHub (e.g., https://github.com/that-in-rust/campfire-on-rust).
+
+2. **Search the Repository's Code**  
+   - Use the search bar at the top of the repository page.
+   - Type any search term (even just a letter like a or *) and hit Enter.
+   - This action prompts GitHub to index the repository for code search and for tools like Copilot and ChatGPT.
+
+3. **Wait 5–10 Minutes**  
+   - Indexing usually completes within a few minutes.
+   - After that, you should be able to access the repository in ChatGPT and other GitHub-integrated tools.
+
+**Summary:**  
+- Go to the repo on GitHub.
+- Use the code search function there.
+- Wait a few minutes for indexing to complete.
+
+Let me know if you want a step-by-step with screenshots or more details!
+
