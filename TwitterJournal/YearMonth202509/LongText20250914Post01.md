@@ -20,7 +20,19 @@ architecture-L2. md ➡️
 design. md ➡️ 
 tasks. md
 
-earlier docs being the governing rules - priority highest
+analyze do not make changes - tell me differences and what you recommend - but do not actually make changes
+
+I think the lower levels should have maximum detail - so that before writing code only they have to referred - wdyt
+
+requirements.md (TOP - Governing Rules)
+    ↓
+architecture.md (System Design)
+    ↓  
+architecture-L2.md (Implementation Patterns)
+    ↓
+design.md (Complete Technical Contracts)
+    ↓
+tasks.md (BOTTOM - Maximum Implementation Detail)
 
 KEY IDEAS - before you wrtie code - WRITE Tests and INTERFACE STUBS - and reason around them deeply
 
