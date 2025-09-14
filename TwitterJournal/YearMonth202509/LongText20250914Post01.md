@@ -22,6 +22,8 @@ tasks. md
 
 earlier docs being the governing rules - priority highest
 
+KEY IDEAS - before you wrtie code - WRITE Tests and INTERFACE STUBS - and reason around them deeply
+
 
 ```
 ### TIL Github does not index your repo unless you search at least once
