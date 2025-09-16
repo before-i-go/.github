@@ -7,10 +7,19 @@ Interview Prep: Rust Hallows
     - Lifetimes
     - Traits
         - drop trait
+        - box
+        - heap allocation
 - Rust differences with other languages
     - Java
     - Go
     - C++
     - C
 - Code of https://github.com/that-in-rust/tweet-scrolls 
-- Rust Idioms Notes
+- NotebookLM
+    - Rust Idioms Notes
+        - Rust Interview Questions
+        - Rust LLM references
+    - RustHallows
+    - Rust vs Other Langauges
+    - Rust Twitter Scrolls
+    - How to code using LLMs
