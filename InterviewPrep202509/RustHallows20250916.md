@@ -9,17 +9,11 @@ Interview Prep: Rust Hallows
         - drop trait
         - box
         - heap allocation
-- Rust differences with other languages
-    - Java
-    - Go
-    - C++
-    - C
-- Code of https://github.com/that-in-rust/tweet-scrolls 
 - NotebookLM
     - Rust Idioms Notes
         - Rust Interview Questions
         - Rust LLM references
     - RustHallows
     - Rust vs Other Langauges
-    - Rust Twitter Scrolls
+    - Rust Twitter Scrolls - Code of https://github.com/that-in-rust/tweet-scrolls 
     - How to code using LLMs
