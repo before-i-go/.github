@@ -47,7 +47,7 @@ find . -name "*.md" -type f ! -path "./.git/*" | sort | while read -r file; do
         lines=$(wc -l < "$file" 2>/dev/null || echo "0")
         words=$(wc -w < "$file" 2>/dev/null || echo "0")
         # Check if file is in our checklist
-        if grep -q "$file" .github/A01SummaryProgress20250920.md 2>/dev/null; then
+        if grep -q "$file" .github/WIP202509/A01SummaryProgress20250920.md 2>/dev/null; then
             status="✅ Tracked"
         else
             status="📋 Untracked"
@@ -67,7 +67,7 @@ find . -name "*.json" -type f ! -path "./.git/*" | sort | while read -r file; do
         lines=$(wc -l < "$file" 2>/dev/null || echo "0")
         words=$(wc -w < "$file" 2>/dev/null || echo "0")
         # Check if file is in our checklist
-        if grep -q "$file" .github/A01SummaryProgress20250920.md 2>/dev/null; then
+        if grep -q "$file" .github/WIP202509/A01SummaryProgress20250920.md 2>/dev/null; then
             status="✅ Tracked"
         else
             status="📋 Untracked"
@@ -114,8 +114,8 @@ if [ -f "$CURRENT_SNAPSHOT" ]; then
         echo "- Word Count Change: $(printf "%'d" $WORD_DIFF)" >> "$TEMP_SNAPSHOT"
 
         # Calculate processing progress
-        COMPLETED_FILES=$(grep -c "\[x\]" .github/A01SummaryProgress20250920.md 2>/dev/null || echo "0")
-        TOTAL_TRACKED=$(grep -c "\[.\]" .github/A01SummaryProgress20250920.md 2>/dev/null || echo "0")
+        COMPLETED_FILES=$(grep -c "\[x\]" .github/WIP202509/A01SummaryProgress20250920.md 2>/dev/null || echo "0")
+        TOTAL_TRACKED=$(grep -c "\[.\]" .github/WIP202509/A01SummaryProgress20250920.md 2>/dev/null || echo "0")
 
         if [ "$TOTAL_TRACKED" -gt 0 ]; then
             PROGRESS=$((COMPLETED_FILES * 100 / TOTAL_TRACKED))
@@ -142,8 +142,8 @@ echo "- **Total Lines**: $(printf "%'d" $TOTAL_LINES)" >> "$CHANGE_LOG"
 echo "- **Total Words**: $(printf "%'d" $TOTAL_WORDS)" >> "$CHANGE_LOG"
 
 # Add processing progress to change log
-COMPLETED_FILES=$(grep -c "\[x\]" .github/A01SummaryProgress20250920.md 2>/dev/null || echo "0")
-TOTAL_TRACKED=$(grep -c "\[.\]" .github/A01SummaryProgress20250920.md 2>/dev/null || echo "0")
+COMPLETED_FILES=$(grep -c "\[x\]" .github/WIP202509/A01SummaryProgress20250920.md 2>/dev/null || echo "0")
+TOTAL_TRACKED=$(grep -c "\[.\]" .github/WIP202509/A01SummaryProgress20250920.md 2>/dev/null || echo "0")
 
 if [ "$TOTAL_TRACKED" -gt 0 ]; then
     PROGRESS=$((COMPLETED_FILES * 100 / TOTAL_TRACKED))

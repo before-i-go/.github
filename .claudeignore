@@ -1,0 +1,7 @@
+.git/
+*.snap
+*.log
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
