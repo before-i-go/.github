@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Session Context Auto-Updater",
+  "description": "Automatically updates session context with current progress, task completion status, and timestamps. Tracks document processing progress and maintains session continuity.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      ".github/A01SummaryProgress20250920.md"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Update the session checkpoint section in .github/A01SummaryProgress20250920.md with current progress status. Analyze the file to count completed vs remaining tasks, update the 'Last Updated' timestamp to current date/time IST, and update the 'Last Processed File', 'Last Line Range', and 'Next Action' fields. If new insights have been added to the Minto Pyramid Summary Table, update the processing statistics accordingly. Maintain the existing structure but ensure all progress tracking is accurate and up-to-date. Focus on providing clear next steps for continuing the document processing work."
+  }
+}

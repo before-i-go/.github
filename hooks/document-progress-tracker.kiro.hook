@@ -1,0 +1,17 @@
+{
+  "enabled": true,
+  "name": "Document Processing Progress Tracker",
+  "description": "Tracks document processing progress with line counts and word counts, generates delta reports, and automatically commits changes to .github folder with descriptive messages including timestamps.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      ".github/A01SummaryProgress20250920.md",
+      ".github/file-snapshots/*"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Generate a document processing snapshot showing all files with line counts and word counts. Create a delta report comparing current state to previous snapshot, highlighting added/removed/modified files with specific line/word count changes. Store current snapshot as .github/file-snapshots/current-snapshot.md, move previous current to previous-snapshot.md, and append changes to change-log.md. After updating snapshots, commit only .github folder changes to git with descriptive message format: 'document-processing-snapshot progress-X% YYYY MM DD IST' and push to main branch. Focus on tracking analysis progress and document evolution."
+  }
+}
