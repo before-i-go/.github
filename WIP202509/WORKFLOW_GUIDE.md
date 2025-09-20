@@ -48,10 +48,17 @@ Your goal is **not** deep analysis; it's to identify and tag high-potential zone
 **Objective:** Process your first file from start to finish
 
 #### **Step 1: Generate the Plan**
-Open your terminal and run `tracker.sh`. Give the file a unique ID (e.g., `2.01`).
+**EASY METHOD:** Just tell me the folder name and I'll handle everything!
 
 ```bash
-# Example with a real file
+# Example: Process an entire folder automatically
+./process-folder.sh RawInput202509
+```
+
+**MANUAL METHOD:** Pick a specific file and give it a unique ID (e.g., `2.01`).
+
+```bash
+# Example with a specific file
 ./tracker.sh 2.01 ./research/rust-async.md
 ```
 
