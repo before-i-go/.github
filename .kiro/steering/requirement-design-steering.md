@@ -22,6 +22,7 @@
 ### File Analysis Methodology
 
 1. **Break down ALL files into 1000-line chunks** for systematic analysis
+   - **Note**: Due to token limits, read in 250-500 line segments but process 1000 lines at a time
 2. **Track progress meticulously** in use-case-analysis.md
 3. **Mark irrelevant files as completed** with clear reasoning (e.g., "ADHD treatment - not relevant for programming libraries")
 4. **Extract concrete use cases** from each relevant chunk with:
@@ -30,7 +31,7 @@
    - Differentiation Potential score (1-10)
    - 5-line use case description
    - Parallel/similar tools for context
-   AND Update it in use-case-202509.md via a terminal command
+   AND Update it in use-case-202509.md via terminal command: `echo "[USE CASE]" >> use-case-202509.md`
 
 ### Use Case Evaluation Framework
 
@@ -92,5 +93,9 @@ The use case analysis is complete when:
 2. A comprehensive list of use cases has been compiled
 3. Use cases have been ranked and categorized
 
+
+**IMPORTANT**: DO NOT STOP until ALL checklists in use-case-analysis.md are completed. This is a systematic process that requires completion before any pause or final requirements definition.
+
+**MINDSET**: Treat this as a continuous, focused analysis session. Each 1000-line chunk brings us closer to comprehensive use case identification. Maintain momentum and progress through all files systematically.
 
 **ONLY THEN** can you pause.
