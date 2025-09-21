@@ -8,6 +8,8 @@
 
 ## Use Case Analysis Process
 
+
+
 ### File Analysis Methodology
 
 1. **Break down ALL files into 1000-line chunks** for systematic analysis
@@ -18,6 +20,7 @@
    - Ease of Testing score (1-10) 
    - 5-line use case description
    - Parallel/similar tools for context
+   AND Update it in use-case-202509.md via a terminal command 
 
 ### File Relevance Criteria
 
@@ -42,14 +45,12 @@
 - Update use-case-analysis.md after each 1000-line chunk
 - Maintain accurate chunk completion counts
 - Calculate and display overall progress percentage
-- Group related use cases by domain/technology
 
 ### Completion Criteria
 
 The use case analysis is complete when:
-1. All 19 files have been processed (either analyzed or marked irrelevant)
-2. All ~300 chunks have been reviewed
+1. ALL the checklists in use-case-analysis.md are marked as completed
 3. A comprehensive list of use cases has been compiled
 4. Use cases have been ranked and categorized
 
-**ONLY THEN** can the requirements document be updated and the design phase begin.
+**ONLY THEN** can you pause.
