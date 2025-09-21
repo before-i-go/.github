@@ -320,6 +320,54 @@
 - [ ] Lines 14001-15000
 - [ ] Lines 15001-15049
 
+### Files from JSON202509P2/ Directory
+
+#### Rust30020250814.json (11,218 lines - Rust Library Ideas)
+- [ ] Lines 1-1000: Rust library idea generation content
+- [ ] Lines 1001-2000: Rust library concepts and specifications
+- [ ] Lines 2001-3000: Rust project planning and requirements
+- [ ] Lines 3001-4000
+- [ ] Lines 4001-5000
+- [ ] Lines 5001-6000
+- [ ] Lines 6001-7000
+- [ ] Lines 7001-8000
+- [ ] Lines 8001-9000
+- [ ] Lines 9001-10000
+- [ ] Lines 10001-11000
+- [ ] Lines 11001-11218
+
+#### Rust30020250815.json (11,218 lines - Rust Library Ideas)
+- [ ] Lines 1-1000: Rust library idea generation content
+- [ ] Lines 1001-2000: Rust library concepts and specifications
+- [ ] Lines 2001-3000: Rust project planning and requirements
+- [ ] Lines 3001-4000
+- [ ] Lines 4001-5000
+- [ ] Lines 5001-6000
+- [ ] Lines 6001-7000
+- [ ] Lines 7001-8000
+- [ ] Lines 8001-9000
+- [ ] Lines 9001-10000
+- [ ] Lines 10001-11000
+- [ ] Lines 11001-11218
+
+### Markdown Files from JSON202509P2/ (For Relevance Assessment)
+
+#### PRDsRust300p1.md (232 lines - Product Requirements)
+- [ ] **REQUIRES ANALYSIS**: Product requirements documents - may contain library specifications
+
+#### Rust30020250815_full.md (848 lines - Complete Rust 300 Content)
+- [ ] **REQUIRES ANALYSIS**: Comprehensive Rust 300 document - may contain technical specifications
+
+#### RustLLM Rust300 Rust OSS Project Planning.md (637 lines - Project Planning)
+- [ ] **REQUIRES ANALYSIS**: OSS project planning document - may contain library development insights
+
+#### Rust300 Rust Library Idea Generation.md (125 lines - Idea Generation)
+- [ ] **REQUIRES ANALYSIS**: Library idea generation methodology
+
+#### Other short markdown files (<150 lines each)
+- [ ] Rust30020250815_complete.md, Rust30020250815.md, Rust30020250815_minto.md
+- [ ] **REQUIRES ANALYSIS**: May contain additional specifications or insights
+
 2. **trun_1b986480e1c84d75bc94381ba6d21189.json** (26,264 lines) - ✅ RELEVANT - OS Development & Driver Systems  
 3. **trun_82b88932a0514984938aec7b95fbee66.json** (10,719 lines) - ANALYZE THIRD
 4. **trun_82b88932a0514984bbc73cb821649c97.json** (24,687 lines) - ANALYZE FOURTH

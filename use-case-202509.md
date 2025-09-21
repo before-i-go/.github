@@ -368,3 +368,36 @@ template metaprogramming analyzers but for Zig's comptime, like const-eval optim
 - **5-liner**: A Rust library that provides a comprehensive style transformation pipeline, converting design tokens to platform-specific code (CSS, Tailwind, StyleSheet.css, Android styles, iOS) with validation and optimization.
 - **Parallels**: Similar to Style Dictionary but with modern Rust performance, like build-time style processors
 
+
+### From React Patterns Analysis (trun_1b986480e1c84d75a6ad29b1d72efff6.json) - Lines 7001-8000
+
+#### Use Case 58: React Server Component Migration Assistant
+- **PMF Probability**: High (9/10) - Migration to RSC is a major pain point for teams
+- **Ease of Testing**: Medium-High (7/10) - Requires complex component analysis
+- **5-liner**: A Rust library that analyzes React codebases and provides automated migration assistance from traditional components to React Server Components, detecting client-side dependencies, suggesting server-side optimizations, and generating compatibility reports.
+- **Parallels**: Similar to codemods but with RSC-specific intelligence, like automated migration tools
+
+#### Use Case 59: CSS-in-JS Compatibility Checker for RSC
+- **PMF Probability**: High (8/10) - CSS-in-JS libraries face compatibility issues with RSC
+- **Ease of Testing**: High (8/10) - Clear compatibility validation and testing
+- **5-liner**: A Rust library that analyzes CSS-in-JS usage patterns and validates React Server Components compatibility, detecting runtime styling dependencies, suggesting zero-runtime alternatives, and providing automated refactoring assistance.
+- **Parallels**: Similar to ESLint rules but specialized for RSC compatibility, like build-time analysis tools
+
+#### Use Case 60: React Compiler Integration Tool
+- **PMF Probability**: High (8/10) - React Compiler adoption is growing but complex
+- **Ease of Testing**: High (8/10) - Clear compiler optimization validation
+- **5-liner**: A Rust library that provides intelligent React Compiler integration, analyzing components for automatic optimization opportunities, detecting memoization candidates, and providing migration assistance from manual memoization to compiler-based optimization.
+- **Parallels**: Similar to React Compiler but with enhanced analysis, like build-time optimization assistants
+
+#### Use Case 61: Advanced ESLint Rule Generator for React
+- **PMF Probability**: Medium-High (7/10) - Custom ESLint rules are needed for team standards
+- **Ease of Testing**: High (8/10) - Clear rule validation and testing patterns
+- **5-liner**: A Rust library that generates custom ESLint rules for React projects, analyzing code patterns and creating team-specific rules for hooks, components, performance, and architecture with automated testing and validation.
+- **Parallels**: Similar to eslint-plugin-react but customizable, like rule generation frameworks
+
+#### Use Case 62: React Hook Dependency Optimizer
+- **PMF Probability**: High (8/10) - Hook dependency management is a constant pain point
+- **Ease of Testing**: High (9/10) - Clear dependency analysis and optimization
+- **5-liner**: A Rust library that optimizes React hook dependency arrays, detecting missing dependencies, preventing infinite loops, suggesting useCallback/useMemo optimizations, and providing intelligent dependency management.
+- **Parallels**: Similar to exhaustive-deps but more intelligent, like automated hook optimization tools
+
