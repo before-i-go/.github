@@ -7,7 +7,7 @@
 #### trun_1b986480e1c84d75a6ad29b1d72efff6.json (16,780 lines - React patterns)
 - [x] Lines 1-1000: React patterns, component purity, hooks best practices
 - [x] Lines 1001-2000: React memoization, performance optimization, data fetching patterns
-- [ ] Lines 2001-3000
+- [x] Lines 2001-3000: React security (XSS prevention), accessibility patterns, form handling architecture
 - [ ] Lines 3001-4000
 - [ ] Lines 4001-5000
 - [ ] Lines 5001-6000
@@ -25,7 +25,7 @@
 
 #### trun_687479aa57e54f17847b1210eb7415e6.json (16,878 lines - WASM/Rust)
 - [x] Lines 1-1000: WASM scheduling, Rust concurrency, performance optimization
-- [ ] Lines 1001-2000
+- [x] Lines 1001-2000: WASM memory management, platform case studies (wasmCloud, Spin, Faasm)
 - [ ] Lines 2001-3000
 - [ ] Lines 3001-4000
 - [ ] Lines 4001-5000
@@ -85,12 +85,20 @@
 - [ ] Lines 21001-22000
 - [ ] Lines 22001-22817
 
+#### trun_82b88932a051498485c362bd64070533.json (13,703 lines - ADHD/Trauma Treatment)
+- [x] **COMPLETED - IRRELEVANT**: Medical/psychological treatment content not relevant for programming libraries
+
 #### Remaining Files (not yet started):
 - [ ] trun_1b986480e1c84d75b02b7fba69f359c9.json (15,709 lines)
 - [ ] trun_1b986480e1c84d75bc94381ba6d21189.json (26,264 lines)
+#### trun_70bcb8fb9a064d2e86eedb6798f80683.json (2,695 lines - Movie scenes)
+- [x] **COMPLETED - IRRELEVANT**: Movie scene analysis not relevant for programming libraries
+
 - [ ] trun_70bcb8fb9a064d2e86eedb6798f80683.json (2,695 lines - Movie scenes)
+#### trun_7335e17607c24192bb54abdd78a1cd59.json (31,209 lines - Yoga/Ancient Practices)
+- [x] **COMPLETED - IRRELEVANT**: Yoga and ancient healing practices not relevant for programming libraries
+
 - [ ] trun_7335e17607c24192bb54abdd78a1cd59.json (31,209 lines)
-- [ ] trun_82b88932a051498485c362bd64070533.json (13,703 lines)
 - [ ] trun_82b88932a0514984938aec7b95fbee66.json (10,719 lines)
 - [ ] trun_82b88932a0514984bbc73cb821649c97.json (24,687 lines)
 - [ ] trun_82b88932a0514984bc2d6d98eab7423f.json (13,797 lines)
@@ -101,6 +109,8 @@
 - [ ] trun_d84ae65ea9e44242a9036aaceeab8832.json (12,474 lines)
 - [ ] trun_da5838edb25d44d3aafd38d1d60f89ec.json (23,591 lines)
 - [ ] trun_da5838edb25d44d3b54fe7c1fd3e5d2a.json (15,049 lines)
+
+**Progress: 5/19 files started, 7/~300 chunks analyzed (2.3%)**
 
 **Progress: 4/19 files started, 4/~300 chunks analyzed (1.3%)**
 
@@ -281,3 +291,15 @@ Based on analysis of the JSON files, here are the top use cases ranked by PMF pr
 - **Ease of Testing**: High (8/10) - Clear pattern detection and analysis
 - **5-liner**: A Rust library that analyzes React codebases to identify data fetching patterns, detect client/server state mixing, suggest optimal fetching strategies, and ensure proper server component usage.
 - **Parallels**: Similar to architectural analysis tools but specialized for React data patterns, like dependency-cruiser but for data flow
+
+#### Use Case 24: WASM Platform Orchestrator
+- **PMF Probability**: Medium-High (7/10) - WASM orchestration is becoming important
+- **Ease of Testing**: Medium (6/10) - Requires complex distributed testing
+- **5-liner**: A Rust library that provides orchestration capabilities for WASM applications across different platforms (wasmCloud, Spin, Faasm), with unified deployment, scaling, and service discovery.
+- **Parallels**: Similar to Kubernetes but for WASM platforms, like Docker Compose but for distributed WASM services
+
+#### Use Case 25: WASM Memory Pool Manager
+- **PMF Probability**: Medium-High (7/10) - Memory management is critical for WASM performance
+- **Ease of Testing**: High (8/10) - Clear memory allocation metrics
+- **5-liner**: A Rust library that provides efficient memory pool management for WASM applications, with support for different allocators (dlmalloc, mimalloc, jemalloc) and memory64 optimization.
+- **Parallels**: Similar to jemalloc but specialized for WASM, like memory pool allocators in game engines
