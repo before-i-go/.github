@@ -26,7 +26,7 @@
 #### trun_687479aa57e54f17847b1210eb7415e6.json (16,878 lines - WASM/Rust)
 - [x] Lines 1-1000: WASM scheduling, Rust concurrency, performance optimization
 - [x] Lines 1001-2000: WASM memory management, platform case studies (wasmCloud, Spin, Faasm)
-- [ ] Lines 2001-3000
+- [x] Lines 2001-3000: Kubernetes resource management, kernel-level WASM execution, observability and tracing
 - [ ] Lines 3001-4000
 - [ ] Lines 4001-5000
 - [ ] Lines 5001-6000
@@ -110,7 +110,8 @@
 - [ ] trun_da5838edb25d44d3aafd38d1d60f89ec.json (23,591 lines)
 - [ ] trun_da5838edb25d44d3b54fe7c1fd3e5d2a.json (15,049 lines)
 
-**Progress: 5/19 files started, 7/~300 chunks analyzed (2.3%)**
+**Progress: 5/19 files started, 11/~300 chunks analyzed (3.7%)**
+**Irrelevant files marked: 3/19 (ADHD treatment, Movie scenes, Yoga practices)**
 
 **Progress: 4/19 files started, 4/~300 chunks analyzed (1.3%)**
 
@@ -303,3 +304,27 @@ Based on analysis of the JSON files, here are the top use cases ranked by PMF pr
 - **Ease of Testing**: High (8/10) - Clear memory allocation metrics
 - **5-liner**: A Rust library that provides efficient memory pool management for WASM applications, with support for different allocators (dlmalloc, mimalloc, jemalloc) and memory64 optimization.
 - **Parallels**: Similar to jemalloc but specialized for WASM, like memory pool allocators in game engines
+
+#### Use Case 26: React Security Analyzer
+- **PMF Probability**: High (8/10) - Security is critical for web applications
+- **Ease of Testing**: High (8/10) - Clear security vulnerability detection
+- **5-liner**: A Rust library that analyzes React applications for security vulnerabilities, detects unsafe dangerouslySetInnerHTML usage, validates XSS prevention measures, and suggests DOMPurify integration patterns.
+- **Parallels**: Similar to ESLint security plugins but more comprehensive, like Snyk but specialized for React security
+
+#### Use Case 27: React Accessibility Validator
+- **PMF Probability**: High (8/10) - Accessibility compliance is increasingly important
+- **Ease of Testing**: High (8/10) - Clear accessibility rule validation
+- **5-liner**: A Rust library that validates React applications for accessibility compliance, checks keyboard navigation patterns, validates ARIA attributes, and ensures proper focus management in complex widgets.
+- **Parallels**: Similar to axe-core but integrated into build process, like a11y linters but more comprehensive
+
+#### Use Case 28: WASM Observability Framework
+- **PMF Probability**: Medium-High (7/10) - Observability is crucial for production WASM
+- **Ease of Testing**: Medium (6/10) - Requires complex tracing and metrics validation
+- **5-liner**: A Rust library that provides comprehensive observability for WASM applications, integrating OpenTelemetry tracing, performance profiling, and metrics collection across different WASM runtimes and platforms.
+- **Parallels**: Similar to OpenTelemetry but specialized for WASM, like Jaeger but with WASM-specific instrumentation
+
+#### Use Case 29: Kubernetes WASM Resource Manager
+- **PMF Probability**: Medium-High (7/10) - Kubernetes WASM integration is growing
+- **Ease of Testing**: Medium (6/10) - Requires Kubernetes cluster testing
+- **5-liner**: A Rust library that manages WASM workloads in Kubernetes, providing CPU pinning, memory isolation, NUMA awareness, and resource allocation optimization for WASM pods using CPU Manager policies.
+- **Parallels**: Similar to Kubernetes resource managers but specialized for WASM, like CPU Manager but with WASM-specific optimizations
