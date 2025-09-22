@@ -984,7 +984,7 @@ Medical/health, entertainment, non-technical research, personal development
 - [ ] 45. Analyze trun_8a68e63f9ca642388f8ce02bb0225f41_from_json.txt (637 lines - 1 chunk)
   _Requirements: 1.1, 1.4, 2.4, 2.5_
 
-- [ ] 46. Analyze Rust300 Rust OSS Project Planning_from_md.txt (637 lines - 1 chunk)
+- [-] 46. Analyze Rust300 Rust OSS Project Planning_from_md.txt (637 lines - 1 chunk)
   _Requirements: 1.1, 1.4, 2.4, 2.5_
 
 - [ ] 47. Analyze RustHallows Project Deep Dive.txt (598 lines - 1 chunk)
