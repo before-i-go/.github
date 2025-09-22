@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Rust Library Discovery System is a manual analysis methodology for systematically extracting high-value Rust library concepts from technical research content. Following the SOPv1 methodology, it processes 111 files in ResearchLot01/TxtInput01/ through systematic 1000-line chunk analysis to identify library opportunities scoring 8-10/10 across three critical dimensions: PMF Probability, Ease of Testing, and Differentiation Potential.
+The Rust Library Discovery System is a manual analysis methodology for systematically extracting high-value Rust library concepts from technical research content. processes 111 files in ResearchLot01/TxtInput01/ through systematic 1000-line chunk analysis to identify library opportunities scoring 8-10/10 across three critical dimensions: PMF Probability, Ease of Testing, and Differentiation Potential.
 
 The design emphasizes terminal-based progress tracking, systematic chunk-by-chunk processing, and rigorous scoring criteria to ensure comprehensive coverage and quality results. The methodology is designed to be executed manually by a researcher following strict protocols.
 
