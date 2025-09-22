@@ -33,6 +33,8 @@ Systems programming, developer tools, performance optimization, runtime analysis
 #### SKIP (Non-programming content)
 Medical/health, entertainment, non-technical research, personal development
 
+
+# IMPORTANT
 All use cases will be appended (nothing else -- not editing - just use echo command to send your summary as an append) in ResearchLot01/Output01/use-case-202509.md
 
 

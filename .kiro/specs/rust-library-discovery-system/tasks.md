@@ -1,4 +1,10 @@
+
+
 # Keep in mind during each action - task sub task
+
+# IMPORTANT
+All use cases will be appended (nothing else -- not editing - just use echo command to send your summary as an append) in ResearchLot01/Output01/use-case-202509.md
+
 
 ## LAYER 1: Scoring Framework
 

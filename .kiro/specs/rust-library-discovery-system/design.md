@@ -6,25 +6,9 @@ The Rust Library Discovery System is a manual analysis methodology for systemati
 
 The design emphasizes terminal-based progress tracking, systematic chunk-by-chunk processing, and rigorous scoring criteria to ensure comprehensive coverage and quality results. The methodology is designed to be executed manually by a researcher following strict protocols.
 
-## Architecture
+# IMPORTANT
+All use cases will be appended (nothing else -- not editing - just use echo command to send your summary as an append) in ResearchLot01/Output01/use-case-202509.md
 
-### Analysis Workflow
-
-```mermaid
-graph TB
-    A[111 Files in TxtInput01/] --> B[Systematic Chunk Processing]
-    B --> C[Content Relevance Filter]
-    C --> D[Library Concept Extraction]
-    D --> E[Three-Dimensional Scoring]
-    E --> F[Progress Tracking via Terminal]
-    F --> G[Results Compilation]
-    G --> H[Final Use Case Catalog]
-    
-    I[SOPv1 Methodology] --> B
-    I --> C
-    I --> E
-    J[Terminal Commands] --> F
-```
 
 ### Core Components
 
@@ -32,20 +16,16 @@ graph TB
 2. **Content Filtering System**: Distinguishing programming-relevant from non-technical content
 3. **Concept Extraction Protocol**: Identifying and documenting potential library ideas
 4. **Three-Dimensional Scoring Framework**: Evaluating concepts on PMF, Testing, and Differentiation
-5. **Terminal-Based Progress Tracking**: Using command-line tools for integrity and monitoring
-6. **Results Compilation System**: Aggregating findings into comprehensive use case catalog
+6. **Results Compilation System**: Aggregating findings into /home/amuldotexe/Desktop/before-I-go/.github/ResearchLot01/Output01/use-case-202509.md  - All use cases will be appended (nothing else -- not editing - just use echo command to send your summary as an append) in ResearchLot01/Output01/use-case-202509.md
 
-## Components and Interfaces
+# IMPORTANT
+All use cases will be appended (nothing else -- not editing - just use echo command to send your summary as an append) in ResearchLot01/Output01/use-case-202509.md
+
+
 
 ### Chunk Analysis Process
 
 **Purpose**: Systematic manual processing of content in manageable 1000-line segments
-
-**Analysis Protocol**:
-- Read 250-500 lines at a time due to token limits IF NEEDED
-- Process each file from largest to smallest (RustConcepts20250909.txt first with 53 chunks)
-- Mark chunks as completed [x] or skipped with reasoning
-- Extract library concepts with 5-line descriptions from relevant content
 
 **Content Processing Steps**:
 1. Open file and navigate to specific line range (Lines X-Y)
@@ -130,21 +110,9 @@ graph TB
 - Strategic recommendations for Rust library development priorities
 - Comprehensive documentation of analysis methodology and results
 
-## Data Models
-
-### File Analysis Structure
-
-**ResearchLot01 Organization** (Already Complete ✅):
-- **TxtInput01/**: 111 unique .txt files ready for analysis
-- **Progress01/**: use-case-analysis.md with 111 file sections and chunk checklists
-- **Output01/**: use-case-202509.md for compiled results
-- **NonTxtInput01/**: 173 original files preserved as backup
-- **Duplicates01/**: 32 duplicate files moved here
 
 ## FINAL OUTPUT place is ONLY 1 
 All use cases will be appended (nothing else -- not editing - just use echo command to send your summary as an append) in ResearchLot01/Output01/use-case-202509.md
-
-
 
 
 ### Content Analysis Models
@@ -155,11 +123,11 @@ All use cases will be appended (nothing else -- not editing - just use echo comm
 **Domain**: [Technology Domain - React/WASM/Rust/etc.]
 **Source**: [filename.txt, Lines X-Y]
 **Description**: 
-- Line 1: Core problem or opportunity
-- Line 2: Proposed solution approach
-- Line 3: Key technical features
-- Line 4: Target use cases
-- Line 5: Expected benefits
+- Paragraph 1: Core problem or opportunity
+- Paragraph 2: Proposed solution approach
+- Paragraph 3: Key technical features
+- Paragraph 4: Target use cases
+- Paragraph 5: Expected benefits
 
 **Scoring**:
 - PMF Probability: X/10 - [reasoning]
