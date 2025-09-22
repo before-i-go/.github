@@ -467,3 +467,197 @@ template metaprogramming analyzers but for Zig's comptime, like const-eval optim
 - **5-liner**: A Rust library that validates React components against WAI-ARIA authoring practices, detecting accessibility violations, suggesting fixes, and ensuring compliance with WCAG standards.
 - **Parallels**: Similar to axe-core but specialized for React patterns, like accessibility linters
 
+### From React Patterns Analysis (trun_1b986480e1c84d75a6ad29b1d72efff6.json) - Lines 4001-5000
+
+#### Use Case 73: React Anti-Pattern Detection Engine
+- **PMF Probability**: Very High (9/10) - Anti-pattern detection is critical for code quality
+- **Ease of Testing**: High (9/10) - Clear pattern detection with deterministic validation
+- **5-liner**: A Rust library that analyzes React codebases to detect common anti-patterns like props drilling, useEffect misuse, in-component business logic, and complicated view logic with automated refactoring suggestions.
+- **Parallels**: Similar to ESLint plugins but more comprehensive, like static analysis tools specialized for React anti-patterns
+
+#### Use Case 74: Component Structure Analyzer
+- **PMF Probability**: High (8/10) - Component architecture is crucial for maintainability
+- **Ease of Testing**: High (8/10) - Clear structural analysis with validation rules
+- **5-liner**: A Rust library that analyzes React component structures to ensure proper separation of concerns, detect tightly coupled components, and suggest improvements for better maintainability and testability.
+- **Parallels**: Similar to architecture analysis tools but specialized for React component structure
+
+#### Use Case 75: asChild Pattern Type-Safe Implementation
+- **PMF Probability**: Medium-High (7/10) - asChild pattern is growing but complex to implement safely
+- **Ease of Testing**: High (8/10) - Clear composition pattern validation
+- **5-liner**: A Rust library that provides type-safe implementations of the asChild pattern for React components, handling prop merging, slot-based composition, and ensuring proper TypeScript integration.
+- **Parallels**: Similar to Radix UI's asChild pattern but with enhanced type safety and compile-time validation
+
+#### Use Case 76: Control Props Pattern Validator
+- **PMF Probability**: High (8/10) - Control props are essential for flexible component APIs
+- **Ease of Testing**: High (9/10) - Clear state management pattern validation
+- **5-liner**: A Rust library that validates and generates control props patterns for React components, ensuring proper state synchronization between parent and child components with type safety.
+- **Parallels**: Similar to Kent C. Dodds' control props patterns but with automated validation and generation
+
+#### Use Case 77: State Reducer Pattern Generator
+- **PMF Probability**: Very High (9/10) - State reducers provide advanced state customization with less boilerplate
+- **Ease of Testing**: High (8/10) - Clear state transition logic with deterministic behavior
+- **5-liner**: A Rust library that generates state reducer pattern implementations for React components, enabling users to intercept and customize internal state transitions without full control props boilerplate.
+- **Parallels**: Similar to Downshift's state reducer but with automated generation, like Redux middleware but for component state
+
+#### Use Case 78: Presentational/Container Component Separator
+- **PMF Probability**: High (8/10) - Separation of concerns is crucial for maintainable React apps
+- **Ease of Testing**: High (9/10) - Clear separation makes testing and validation straightforward
+- **5-liner**: A Rust library that automatically separates React components into presentational and container components based on their responsibilities, generating the necessary boilerplate and maintaining type safety.
+- **Parallels**: Similar to component analysis tools but with automated separation, like architectural refactoring assistants
+
+#### Use Case 79: Component Purity Validator
+- **PMF Probability**: High (8/10) - Component purity is critical for performance and debugging
+- **Ease of Testing**: Very High (9/10) - Clear deterministic behavior validation
+- **5-liner**: A Rust library that analyzes React components and hooks for purity violations, detecting side effects during render, ensuring deterministic behavior, and identifying optimization opportunities.
+- **Parallels**: Similar to ESLint purity rules but more comprehensive, like React's built-in purity detection with enhanced validation
+
+#### Use Case 80: Next.js Server Component Optimizer
+- **PMF Probability**: High (8/10) - Next.js optimization is increasingly important
+- **Ease of Testing**: Medium-High (7/10) - Requires understanding of server/client boundaries
+- **5-liner**: A Rust library that analyzes Next.js applications to detect unnecessary client components, suggests server component optimizations, and provides automated migration paths for better performance.
+- **Parallels**: Similar to Next.js built-in optimizations but more intelligent, like performance analysis tools specialized for Server Components
+
+#### Use Case 81: React Core Principles Validator
+- **PMF Probability**: High (8/10) - Core principles validation is essential for code quality
+- **Ease of Testing**: Very High (9/10) - Clear rule validation with deterministic outcomes
+- **5-liner**: A Rust library that validates React codebases against core idiomatic principles including component purity, one-way data flow, proper state lifting, and separation of concerns with automated refactoring suggestions.
+- **Parallels**: Similar to ESLint rules but more comprehensive, like React's own rules engine with enhanced validation
+
+#### Use Case 82: Component Definition Analyzer
+- **PMF Probability**: Medium-High (7/10) - Component structure analysis prevents common anti-patterns
+- **Ease of Testing**: High (8/10) - Clear structural detection with validation rules
+- **5-liner**: A Rust library that analyzes React component definitions to detect anti-patterns like defining components inside render functions, business logic in views, and complicated logic in UI components with automated fixes.
+- **Parallels**: Similar to structural analysis tools but specialized for React component patterns, like architectural linters
+
+#### Use Case 83: One-Way Data Flow Validator
+- **PMF Probability**: High (8/10) - Data flow validation is crucial for React architecture
+- **Ease of Testing**: High (9/10) - Clear data flow analysis with predictable validation
+- **5-liner**: A Rust library that validates React applications for proper one-way data flow, detects state management anti-patterns, ensures proper prop drilling patterns, and suggests improvements for data architecture.
+- **Parallels**: Similar to data flow analysis tools but specialized for React patterns, like architecture validation tools
+
+#### Use Case 84: State Management Optimizer
+- **PMF Probability**: Very High (9/10) - State management is a universal React challenge
+- **Ease of Testing**: High (8/10) - Clear state pattern validation with deterministic outcomes
+- **5-liner**: A Rust library that analyzes React state management patterns, detects anti-patterns like direct state mutation, suggests proper lifting state up patterns, and recommends optimal state solutions (useState, useReducer, Context, external libraries).
+- **Parallels**: Similar to Redux DevTools but with automated analysis, like state pattern detection engines
+
+#### Use Case 85: Compound Component Generator
+- **PMF Probability**: High (8/10) - Compound components are powerful but complex to implement
+- **Ease of Testing**: High (8/10) - Clear component composition validation
+- **5-liner**: A Rust library that generates compound component patterns with implicit state sharing, flexible APIs, and type-safe child component coordination similar to HTML select/option elements.
+- **Parallels**: Similar to Radix UI but automated generation, like Kent C. Dodds' compound component patterns
+
+#### Use Case 86: Hooks Best Practices Validator
+- **PMF Probability**: Very High (9/10) - Hooks rules violations are common and painful
+- **Ease of Testing**: Very High (9/10) - Clear deterministic rule validation
+- **5-liner**: A Rust library that validates React hooks usage against all best practices: top-level usage, proper dependency arrays, custom hooks naming conventions, and rules of hooks compliance with automated fixes.
+- **Parallels**: Similar to eslint-plugin-react-hooks but more comprehensive, like hooks analysis tools
+
+#### Use Case 87: Custom Hooks Generator
+- **PMF Probability**: High (8/10) - Custom hooks extraction is crucial for code reuse
+- **Ease of Testing**: High (8/10) - Clear hooks pattern validation and testing
+- **5-liner**: A Rust library that analyzes React components to extract reusable stateful logic into custom hooks with proper naming conventions, dependency management, and TypeScript integration.
+- **Parallels**: Similar to React Query generators but for general custom hooks, like hooks refactoring tools
+
+#### Use Case 88: useRef Optimization Analyzer
+- **PMF Probability**: Medium-High (7/10) - useRef misuse is a common performance issue
+- **Ease of Testing**: High (8/10) - Clear re-render impact detection
+- **5-liner**: A Rust library that analyzes React components for optimal useRef usage, detecting unnecessary re-renders, proper DOM node access patterns, and suggesting useState vs useRef optimizations.
+- **Parallels**: Similar to React DevTools but specialized for ref optimization, like performance analysis tools
+
+#### Use Case 89: Presentational/Container Component Separator
+- **PMF Probability**: High (8/10) - Separation of concerns is crucial for maintainable React apps
+- **Ease of Testing**: Very High (9/10) - Clear separation makes testing and validation straightforward
+- **5-liner**: A Rust library that automatically separates React components into presentational (how things look) and container (how things work) components based on their responsibilities, generating the necessary boilerplate and maintaining type safety.
+- **Parallels**: Similar to component analysis tools but with automated separation, like architectural refactoring assistants
+
+#### Use Case 90: Rules of Hooks Validator
+- **PMF Probability**: Very High (9/10) - Hooks rules violations are extremely common and painful
+- **Ease of Testing**: Very High (9/10) - Clear deterministic rule validation
+- **5-liner**: A Rust library that validates React hooks usage against all core rules: top-level usage, no conditional calls, proper order, and compliance with eslint-plugin-react-hooks rules with automated fixes and suggestions.
+- **Parallels**: Similar to eslint-plugin-react-hooks but with enhanced validation and automated fixes
+
+#### Use Case 91: useReducer State Pattern Advisor
+- **PMF Probability**: High (8/10) - Complex state management is a common challenge
+- **Ease of Testing**: High (8/10) - Clear state transition validation
+- **5-liner**: A Rust library that analyzes React components to detect when multiple related useState calls should be consolidated into useReducer patterns, providing automated refactoring suggestions and reducer function generation.
+- **Parallels**: Similar to Redux DevTools but with automated pattern detection, like state management advisors
+
+#### Use Case 92: Zero-Runtime CSS-in-JS Generator
+- **PMF Probability**: High (8/10) - Zero-runtime CSS is increasingly important for performance
+- **Ease of Testing**: High (8/10) - Clear build-time processing validation
+- **5-liner**: A Rust library that generates zero-runtime CSS-in-JS solutions, processing TypeScript styles at build time to produce static CSS files with locally scoped class names and CSS Variables, compatible with React Server Components.
+- **Parallels**: Similar to Vanilla Extract but with Rust performance, like build-time style processors
+
+#### Use Case 93: Design Token Management System
+- **PMF Probability**: Very High (9/10) - Design tokens are critical for design systems and consistency
+- **Ease of Testing**: High (8/10) - Clear token validation and transformation testing
+- **5-liner**: A Rust library that provides comprehensive design token management, supporting W3C Design Tokens Format, platform-agnostic token definitions, and automated transformation to various target platforms (CSS, iOS, Android, web).
+- **Parallels**: Similar to Style Dictionary but written in Rust, like Tokens Studio but as a library
+
+#### Use Case 94: Multi-Platform Design Token Transformer
+- **PMF Probability**: High (8/10) - Cross-platform design systems are increasingly important
+- **Ease of Testing**: High (8/10) - Clear transformation validation across platforms
+- **5-liner**: A Rust library that transforms design tokens into platform-specific code (CSS variables, iOS Swift, Android Kotlin, web components) with type safety and platform-specific optimizations.
+- **Parallels**: Similar to Style Dictionary transforms but with enhanced type safety, like cross-platform build tools
+
+#### Use Case 95: Theme Contract System
+- **PMF Probability**: High (8/10) - Theming is essential for modern applications
+- **Ease of Testing**: High (9/10) - Clear theme validation and switching testing
+- **5-liner**: A Rust library that provides type-safe theme contract creation, supporting multiple simultaneous themes, dynamic theme switching, and design token integration with CSS Variables.
+- **Parallels**: Similar to Vanilla Extract theming but with Rust performance, like theme management systems
+
+#### Use Case 96: CSS-in-JS Compatibility Checker
+- **PMF Probability**: High (8/10) - CSS-in-JS compatibility is a major pain point with RSC
+- **Ease of Testing**: High (8/10) - Clear compatibility validation and testing
+- **5-liner**: A Rust library that analyzes CSS-in-JS usage patterns and validates React Server Components compatibility, detecting runtime styling dependencies, suggesting zero-runtime alternatives, and providing migration assistance.
+- **Parallels**: Similar to build-time analysis tools but specialized for CSS-in-JS compatibility
+
+#### Use Case 97: Next.js CSS-in-JS Configuration Optimizer
+- **PMF Probability**: High (8/10) - Next.js CSS-in-JS configuration is complex and error-prone
+- **Ease of Testing**: High (8/10) - Clear configuration validation and testing
+- **5-liner**: A Rust library that automates Next.js CSS-in-JS configuration for styled-components, emotion, and other libraries, handling style registries, useServerInsertedHTML hooks, and proper SSR setup with type safety.
+- **Parallels**: Similar to Next.js configuration tools but specialized for CSS-in-JS setup
+
+#### Use Case 98: Performance Regression Detector
+- **PMF Probability**: Very High (9/10) - Performance regression detection is critical for production apps
+- **Ease of Testing**: High (8/10) - Clear performance benchmarking and validation
+- **5-liner**: A Rust library that detects React performance regressions by measuring component render times, memoization effectiveness, and style injection performance, providing automated optimization suggestions.
+- **Parallels**: Similar to React DevTools but with automated regression detection, like performance monitoring tools
+
+#### Use Case 99: React Suspense Integration Helper
+- **PMF Probability**: Medium-High (7/10) - Suspense integration is complex but valuable
+- **Ease of Testing**: Medium-High (7/10) - Requires complex async testing scenarios
+- **5-liner**: A Rust library that helps integrate React Suspense with data fetching libraries, detecting Suspense-enabled data sources, and providing proper fallback and error boundary configurations.
+- **Parallels**: Similar to React Query but with enhanced Suspense integration, like async data flow managers
+
+#### Use Case 100: Exhaustive Dependencies Analyzer
+- **PMF Probability**: Very High (9/10) - useEffect dependency issues are extremely common and painful
+- **Ease of Testing**: Very High (9/10) - Clear static analysis with deterministic validation
+- **5-liner**: A Rust library that analyzes React useEffect dependencies beyond the standard eslint rules, detecting stale closures, infinite loops, and providing intelligent dependency optimization suggestions with automated fixes.
+- **Parallels**: Similar to eslint-plugin-react-hooks but with enhanced analysis and automated fixes
+
+#### Use Case 101: React Compiler Integration Assistant
+- **PMF Probability**: Very High (9/10) - React Compiler adoption is growing but complex
+- **Ease of Testing**: High (8/10) - Clear compiler optimization validation
+- **5-liner**: A Rust library that provides intelligent React Compiler integration, analyzing components for automatic optimization opportunities, detecting memoization candidates, and providing migration assistance from manual memoization to compiler-based optimization.
+- **Parallels**: Similar to React Compiler but with enhanced analysis, like build-time optimization assistants
+
+#### Use Case 102: useReducer vs useState Advisor
+- **PMF Probability**: High (8/10) - State management pattern selection is crucial
+- **Ease of Testing**: High (8/10) - Clear state pattern validation and analysis
+- **5-liner**: A Rust library that analyzes React state management patterns and advises when to use useState vs useReducer based on complexity, performance needs, and maintainability factors with automated refactoring suggestions.
+- **Parallels**: Similar to state management advisors but with automated pattern detection, like architecture analysis tools
+
+#### Use Case 103: useRef Usage Optimizer
+- **PMF Probability**: Medium-High (7/10) - useRef misuse is common but fixable
+- **Ease of Testing**: High (8/10) - Clear ref usage pattern validation
+- **5-liner**: A Rust library that analyzes React useRef usage patterns, detecting inappropriate state storage, suggesting proper useState vs useRef decisions, and optimizing DOM access patterns with performance analysis.
+- **Parallels**: Similar to React DevTools but specialized for ref optimization, like usage pattern analyzers
+
+#### Use Case 104: Custom Hooks Testing Framework
+- **PMF Probability**: High (8/10) - Custom hooks testing is complex and essential
+- **Ease of Testing**: High (9/10) - Clear testing patterns with deterministic outcomes
+- **5-liner**: A Rust library that provides comprehensive testing framework for React custom hooks, handling async operations, cleanup functions, dependency testing, and lifecycle validation with minimal boilerplate.
+- **Parallels**: Similar to React Testing Library but specialized for hooks, like react-hooks-testing-library with enhanced features
+

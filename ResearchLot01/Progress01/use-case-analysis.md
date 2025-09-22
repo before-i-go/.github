@@ -284,12 +284,12 @@
 - [ ] Lines 15001-16000: Content analysis needed
 - [ ] Lines 16001-16878: Content analysis needed
 
-#### trun_1b986480e1c84d75a6ad29b1d72efff6_from_json.txt (16780 lines - TBD)
-- [ ] Lines 1-1000: Content analysis needed
-- [ ] Lines 1001-2000: Content analysis needed
-- [ ] Lines 2001-3000: Content analysis needed
-- [ ] Lines 3001-4000: Content analysis needed
-- [ ] Lines 4001-5000: Content analysis needed
+#### trun_1b986480e1c84d75a6ad29b1d72efff6_from_json.txt (16780 lines - React Patterns & Anti-Patterns)
+- [x] Lines 1-1000: React anti-patterns detection, props drilling, component structure analysis
+- [x] Lines 1001-2000: useEffect misuse patterns, data transformation, business logic separation
+- [x] Lines 2001-3000: Component composition patterns, headless components, accessibility
+- [x] Lines 3001-4000: ESLint rules, hook dependency analysis, performance optimization
+- [x] Lines 4001-5000: React anti-patterns catalog, asChild pattern, control props, refactoring recipes, state reducer pattern
 - [ ] Lines 5001-6000: Content analysis needed
 - [ ] Lines 6001-7000: Content analysis needed
 - [ ] Lines 7001-8000: Content analysis needed

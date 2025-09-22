@@ -1,5 +1,7 @@
 # SOPv1: Systematic Discovery of High-PMF, Easy-to-Test Rust Libraries
 
+**🚨 CRITICAL EXECUTION REQUIREMENT**: ALL ANALYSIS MUST USE TERMINAL COMMANDS AS SPECIFIED BELOW. NO MANUAL EDITING ALLOWED.
+
 **VERSION**: 1.0 - Initial methodology established through ResearchLot01 experience
 **EVOLUTION**: This SOP will evolve (SOPv2, SOPv3, etc.) as we refine the methodology through successive research lots
 
@@ -8,6 +10,15 @@
 **CORE MISSION**: Transform raw content into prioritized Rust library concepts through systematic analysis, targeting libraries with 8-10/10 scores in Testing Ease, PMF Probability, and Differentiation Potential.
 
 **SUCCESS OUTCOME**: Ranked list of Rust library concepts that developers actively seek, use, and contribute to - creating sustainable open source projects with real-world impact.
+
+## ⚠️ TERMINAL-ONLY EXECUTION MANDATORY
+
+**ALL PROGRESS UPDATES MUST USE TERMINAL COMMANDS**:
+- `find ResearchLot01/TxtInput01/ -name "*.txt" | wc -l` → Count total files
+- `grep -c "\[x\]" ResearchLot01/Progress01/use-case-analysis.md` → Count completed chunks
+- `grep -c "\[ \]" ResearchLot01/Progress01/use-case-analysis.md` → Count remaining chunks
+- `./SOP/tree-with-wc.sh` → Monitor repository status
+- **NO MANUAL EDITING OF TRACKING FILES**
 
 ## LAYER 1: Execution Framework
 
