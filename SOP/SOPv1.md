@@ -172,9 +172,76 @@ The repository is now perfectly organized for the systematic 1000-line chunk ana
 - ✅ Fully accessible for analysis
 - ✅ Backed up with originals preserved
 
+## LAYER 5: Task Generation Methodology
+
+### Automated Analysis Task Creation
+After duplicate detection and file organization, systematic task generation creates comprehensive 1000-line chunk analysis lists.
+
+#### Terminal Commands for Task Generation
+```bash
+# 1. Count files in analysis directory
+find ResearchLot01/TxtInput01/ -type f | wc -l
+# Output: 111
+
+# 2. Get sorted file list with line counts
+find ResearchLot01/TxtInput01/ -name "*.txt" -exec wc -l {} + | sort -nr | head -n -1
+
+# 3. Generate task list for each file
+for file in ResearchLot01/TxtInput01/*.txt; do
+    filename=$(basename "$file")
+    lines=$(wc -l < "$file")
+    echo "#### $filename ($lines lines - TBD)"
+    
+    # Generate 1000-line chunk tasks
+    for ((start=1; start<=lines; start+=1000)); do
+        end=$((start + 999))
+        if [ $end -gt $lines ]; then
+            end=$lines
+        fi
+        echo "- [ ] Lines $start-$end: Content analysis needed"
+    done
+    echo ""
+done > task_list.txt
+
+# 4. Verify file count matches
+find ResearchLot01/TxtInput01/ -type f | wc -l
+grep "^####" task_list.txt | wc -l
+# Both should return 111
+
+# 5. Verify against tree script results
+./SOP/tree-with-wc.sh | grep "Total Files"
+# Should match repository-wide count: 304 files
+```
+
+#### Quality Assurance Verification
+```bash
+# Verify file existence and accessibility
+find ResearchLot01/TxtInput01/ -type f -name "*.txt" | while read file; do
+    if [ ! -r "$file" ]; then
+        echo "ERROR: Cannot read $file"
+    fi
+done
+
+# Check for empty files
+find ResearchLot01/TxtInput01/ -type f -name "*.txt" -size 0 | wc -l
+# Should return count of empty files (5 in ResearchLot01)
+
+# Verify line count accuracy
+find ResearchLot01/TxtInput01/ -name "*.txt" -exec wc -l {} + | tail -1
+# Shows total lines across all files for verification
+```
+
+#### Task List Structure Validation
+The generated use-case-analysis.md follows this verified pattern:
+- **Header**: File count summary (111 files)
+- **Duplicate Results**: Hash check completion status
+- **File Sections**: Each file with line count and chunk breakdown
+- **Chunk Tasks**: 1000-line segments with checkboxes for progress tracking
+- **Empty Files**: Properly identified and listed (0 lines - TBD)
+
 ### SOPv1 Evolution Path
-- **Current**: SOPv1 established through ResearchLot01 organization experience
-- **Future**: SOPv2 will incorporate lessons learned from ResearchLot01 analysis phase
+- **Current**: SOPv1 established through ResearchLot01 organization + task generation experience
+- **Future**: SOPv2 will incorporate lessons learned from ResearchLot01 analysis execution phase
 - **Continuous**: Each ResearchLot will contribute to methodology refinement
 
-**Next Step**: Apply SOPv1 methodology to ResearchLot01 systematic analysis, capturing lessons for SOPv2.
+**Next Step**: Execute systematic analysis using generated task list, capturing execution lessons for SOPv2.
