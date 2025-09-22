@@ -2,102 +2,66 @@
 
 ## Introduction
 
-This feature implements the SOPv1 methodology for systematic discovery of high-PMF (Product-Market Fit), easy-to-test Rust libraries. The system transforms raw research content into prioritized Rust library concepts through automated analysis, targeting libraries with 8-10/10 scores in Testing Ease, PMF Probability, and Differentiation Potential. The core mission is to create a ranked list of Rust library concepts that developers actively seek, use, and contribute to - enabling sustainable open source projects with real-world impact.
+This spec defines the systematic analysis work needed to complete the SOPv1 methodology for discovering high-PMF Rust libraries. The work involves manually analyzing 111 files in ResearchLot01/TxtInput01/ using 1000-line chunks, extracting library concepts, and scoring them on three dimensions. The goal is to complete all the checkboxes in ResearchLot01/Progress01/use-case-analysis.md and compile results in ResearchLot01/Output01/.
 
 ## Requirements
 
-### Requirement 1: Research Lot Organization System
+### Requirement 1: Complete Chunk Analysis for All Files
 
-**User Story:** As a researcher, I want to organize raw research content into structured research lots, so that I can systematically analyze large volumes of content without losing track of progress or duplicating work.
-
-#### Acceptance Criteria
-
-1. WHEN a new research lot is created THEN the system SHALL create the standard directory structure (TxtInput##/, NonTxtInput##/, Progress##/, Output##/, Duplicates##/)
-2. WHEN files are added to a research lot THEN the system SHALL automatically categorize them by file type (txt, docx, pdf, html, json, md)
-3. WHEN duplicate files are detected THEN the system SHALL move duplicates to Duplicates##/ directory and keep the file with the shortest name
-4. WHEN file conversion is needed THEN the system SHALL convert non-txt files to standardized .txt format with clear naming convention (filename_from_extension.txt)
-5. WHEN organization is complete THEN the system SHALL generate accurate file counts and repository statistics
-
-### Requirement 2: Duplicate Detection and Deduplication
-
-**User Story:** As a researcher, I want to automatically detect and handle duplicate content, so that I don't waste time analyzing the same information multiple times.
+**User Story:** As a researcher, I want to systematically analyze all remaining files in ResearchLot01/TxtInput01/ in 1000-line chunks, so that I can extract all potential Rust library concepts from the research content.
 
 #### Acceptance Criteria
 
-1. WHEN duplicate detection runs THEN the system SHALL generate MD5 hashes for all files in the research lot
-2. WHEN duplicate hashes are found THEN the system SHALL identify all files with matching content
-3. WHEN handling duplicates THEN the system SHALL keep the file with the shortest filename and move others to Duplicates##/
-4. WHEN deduplication is complete THEN the system SHALL report the number of duplicates removed and files retained
-5. WHEN verification is needed THEN the system SHALL provide commands to validate the deduplication results
+1. WHEN analyzing a chunk THEN I SHALL read 250-500 lines at a time due to token limits
+2. WHEN content is programming-relevant THEN I SHALL extract library concepts with 5-line descriptions
+3. WHEN content is non-technical THEN I SHALL mark the chunk as skipped with reasoning
+4. WHEN a chunk is complete THEN I SHALL mark the checkbox as [x] in use-case-analysis.md
+5. WHEN all chunks for a file are done THEN I SHALL update the file status and move to next file
 
-### Requirement 3: Content Analysis Task Generation
+### Requirement 2: Score Library Concepts on Three Dimensions
 
-**User Story:** As a researcher, I want to automatically generate systematic analysis tasks for large content files, so that I can process content in manageable chunks without missing any sections.
-
-#### Acceptance Criteria
-
-1. WHEN task generation runs THEN the system SHALL create 1000-line chunk analysis tasks for each file
-2. WHEN a file has more than 1000 lines THEN the system SHALL break it into sequential 1000-line segments
-3. WHEN the final chunk is less than 1000 lines THEN the system SHALL create a task for the remaining lines
-4. WHEN tasks are generated THEN the system SHALL create checkboxes for progress tracking
-5. WHEN task list is complete THEN the system SHALL verify file counts match between directory and task list
-
-### Requirement 4: Progress Tracking System
-
-**User Story:** As a researcher, I want to track my analysis progress across all files and chunks, so that I can see completion status and resume work efficiently.
+**User Story:** As a researcher, I want to score each extracted library concept on PMF Probability, Ease of Testing, and Differentiation Potential, so that I can identify the most promising opportunities.
 
 #### Acceptance Criteria
 
-1. WHEN progress is updated THEN the system SHALL use terminal commands to update tracking files
-2. WHEN chunk analysis is completed THEN the system SHALL mark the corresponding checkbox as complete
-3. WHEN progress is queried THEN the system SHALL report completed chunks, remaining chunks, and overall percentage
-4. WHEN monitoring is needed THEN the system SHALL provide repository status through tree-with-wc.sh script
-5. WHEN manual editing is attempted THEN the system SHALL prevent direct editing of tracking files
+1. WHEN scoring PMF Probability THEN I SHALL rate 1-10 based on developer pain points and market demand
+2. WHEN scoring Ease of Testing THEN I SHALL rate 1-10 based on deterministic behavior and test coverage potential  
+3. WHEN scoring Differentiation Potential THEN I SHALL rate 1-10 based on innovation and competitive advantages
+4. WHEN scoring is complete THEN I SHALL only keep concepts scoring 8-10/10 in all three dimensions
+5. WHEN documenting scores THEN I SHALL provide detailed reasoning for each dimension
 
-### Requirement 5: Content Analysis and Scoring
+### Requirement 3: Document Use Cases with Parallel Analysis
 
-**User Story:** As a researcher, I want to analyze content chunks and score library concepts on three dimensions, so that I can identify the most promising Rust library opportunities.
-
-#### Acceptance Criteria
-
-1. WHEN analyzing content THEN the system SHALL filter for programming-relevant content and skip non-technical material
-2. WHEN a library concept is identified THEN the system SHALL score it on PMF Probability (1-10 scale)
-3. WHEN a library concept is identified THEN the system SHALL score it on Ease of Testing (1-10 scale)
-4. WHEN a library concept is identified THEN the system SHALL score it on Differentiation Potential (1-10 scale)
-5. WHEN scoring is complete THEN the system SHALL append findings to the research lot output file
-
-### Requirement 6: Results Compilation and Ranking
-
-**User Story:** As a researcher, I want to compile and rank all discovered library concepts, so that I can prioritize development efforts on the most promising opportunities.
+**User Story:** As a researcher, I want to document each library concept with detailed descriptions and parallel analysis, so that I can build a comprehensive catalog of opportunities.
 
 #### Acceptance Criteria
 
-1. WHEN analysis is complete THEN the system SHALL compile all use cases into a comprehensive list
-2. WHEN compilation runs THEN the system SHALL rank concepts by their combined scores across all three dimensions
-3. WHEN ranking is complete THEN the system SHALL categorize concepts by score ranges (8-10, 7-8, 5-6, 1-4)
-4. WHEN results are generated THEN the system SHALL create a final ranked list in the Output##/ directory
-5. WHEN synthesis is needed THEN the system SHALL provide summary statistics and top recommendations
+1. WHEN documenting a concept THEN I SHALL write a 5-line description capturing the core idea
+2. WHEN adding parallel analysis THEN I SHALL show how similar concepts exist in other domains
+3. WHEN categorizing concepts THEN I SHALL group by technology domain (React, WASM/Rust, etc.)
+4. WHEN analysis is complete THEN I SHALL append findings to ResearchLot01/Output01/use-case-202509.md
+5. WHEN formatting results THEN I SHALL maintain consistent structure for easy comparison
 
-### Requirement 7: Repository Monitoring and Validation
+### Requirement 4: Use Terminal Commands for Progress Tracking
 
-**User Story:** As a researcher, I want to monitor repository status and validate data integrity, so that I can ensure the analysis process is working correctly and no data is lost.
-
-#### Acceptance Criteria
-
-1. WHEN monitoring is requested THEN the system SHALL provide accurate file counts across all directories
-2. WHEN validation runs THEN the system SHALL verify file accessibility and readability
-3. WHEN checking integrity THEN the system SHALL identify empty files and report their status
-4. WHEN verification is needed THEN the system SHALL confirm task list accuracy against actual file structure
-5. WHEN status is queried THEN the system SHALL provide comprehensive repository statistics
-
-### Requirement 8: Scalable Research Lot System
-
-**User Story:** As a researcher, I want to create multiple research lots using the same methodology, so that I can analyze different content batches while maintaining consistency and learning from previous iterations.
+**User Story:** As a researcher, I want to track my progress using only terminal commands, so that I maintain data integrity and follow SOPv1 methodology exactly.
 
 #### Acceptance Criteria
 
-1. WHEN a new research lot is created THEN the system SHALL follow the established SOPv1 methodology
-2. WHEN multiple research lots exist THEN the system SHALL maintain separate progress tracking for each
-3. WHEN methodology evolves THEN the system SHALL support SOPv2, SOPv3 iterations while preserving previous work
-4. WHEN scaling up THEN the system SHALL handle increasing volumes of content without performance degradation
-5. WHEN lessons are learned THEN the system SHALL capture insights for methodology refinement
+1. WHEN checking progress THEN I SHALL use `grep -c "\[x\]" ResearchLot01/Progress01/use-case-analysis.md` for completed chunks
+2. WHEN checking remaining work THEN I SHALL use `grep -c "\[ \]" ResearchLot01/Progress01/use-case-analysis.md` for pending chunks  
+3. WHEN monitoring files THEN I SHALL use `find ResearchLot01/TxtInput01/ -name "*.txt" | wc -l` for file counts
+4. WHEN checking repository status THEN I SHALL use `./SOP/tree-with-wc.sh` for comprehensive statistics
+5. WHEN updating progress THEN I SHALL never manually edit tracking files, only use terminal commands
+
+### Requirement 5: Complete All Analysis Tasks
+
+**User Story:** As a researcher, I want to complete all remaining analysis tasks in the use-case-analysis.md file, so that I finish the systematic discovery of Rust library concepts.
+
+#### Acceptance Criteria
+
+1. WHEN starting analysis THEN I SHALL work through files in order from largest to smallest
+2. WHEN analyzing RustConcepts20250909.txt THEN I SHALL complete all 53 chunks (52,171 lines total)
+3. WHEN analyzing other large files THEN I SHALL complete all their respective chunks systematically  
+4. WHEN all files are analyzed THEN I SHALL have 100% completion in use-case-analysis.md
+5. WHEN analysis is complete THEN I SHALL compile final results in ResearchLot01/Output01/

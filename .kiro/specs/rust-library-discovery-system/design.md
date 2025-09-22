@@ -2,7 +2,9 @@
 
 ## Overview
 
-The Rust Library Discovery System implements the SOPv1 methodology as a command-line tool that automates the systematic analysis of research content to identify high-PMF Rust library opportunities. The system follows a pipeline architecture with distinct phases: Organization, Analysis, and Synthesis, each with specialized components handling file management, content processing, and results compilation.
+The Rust Library Discovery System implements a systematic approach to identifying high-value Rust library opportunities from diverse technical content. The system follows the SOPv1 methodology with a three-phase process: ORGANIZE, ANALYZE, and SYNTHESIZE. It processes research lots containing millions of lines of technical content and extracts actionable library concepts scoring 8-10/10 across three critical dimensions.
+
+The design emphasizes terminal-based operations, systematic chunk processing, and rigorous quality assurance to ensure reliable identification of library concepts with strong market potential and technical feasibility.
 
 ## Architecture
 
@@ -10,325 +12,340 @@ The Rust Library Discovery System implements the SOPv1 methodology as a command-
 
 ```mermaid
 graph TB
-    A[Raw Content Input] --> B[Research Lot Organizer]
-    B --> C[Duplicate Detector]
-    C --> D[Content Converter]
-    D --> E[Task Generator]
-    E --> F[Progress Tracker]
-    F --> G[Content Analyzer]
-    G --> H[Scoring Engine]
-    H --> I[Results Compiler]
-    I --> J[Ranking System]
-    J --> K[Output Generator]
+    A[Research Lot Input] --> B[Organization Engine]
+    B --> C[Content Analysis Engine]
+    C --> D[Scoring System]
+    D --> E[Progress Tracker]
+    E --> F[Results Synthesizer]
+    F --> G[Quality Validator]
+    G --> H[Final Output]
     
-    subgraph "Phase 1: Organization"
-        B
-        C
-        D
-        E
-    end
-    
-    subgraph "Phase 2: Analysis"
-        F
-        G
-        H
-    end
-    
-    subgraph "Phase 3: Synthesis"
-        I
-        J
-        K
-    end
+    I[Terminal Commands] --> E
+    J[SOPv1 Methodology] --> B
+    J --> C
+    J --> D
 ```
 
-### Core Components
+### System Components
 
-#### 1. Research Lot Manager
-- **Purpose**: Manages the lifecycle of research lots and directory structure
-- **Responsibilities**: Create/initialize research lots, maintain directory structure, provide lot metadata
-- **Key Operations**: `create_lot()`, `initialize_structure()`, `get_lot_info()`
-
-#### 2. File System Organizer
-- **Purpose**: Handles file categorization and organization within research lots
-- **Responsibilities**: Sort files by type, create standardized directory structure, maintain file inventories
-- **Key Operations**: `categorize_files()`, `organize_by_type()`, `generate_inventory()`
-
-#### 3. Duplicate Detection Engine
-- **Purpose**: Identifies and handles duplicate content using MD5 hashing
-- **Responsibilities**: Generate file hashes, detect duplicates, resolve conflicts by filename length
-- **Key Operations**: `generate_hashes()`, `find_duplicates()`, `resolve_conflicts()`
-
-#### 4. Content Conversion Pipeline
-- **Purpose**: Converts various file formats to standardized .txt format
-- **Responsibilities**: Handle docx, pdf, html, json, md conversions with consistent naming
-- **Key Operations**: `convert_file()`, `standardize_name()`, `validate_conversion()`
-
-#### 5. Task Generation System
-- **Purpose**: Creates systematic analysis tasks for content chunks
-- **Responsibilities**: Break files into 1000-line segments, generate checkbox tasks, create progress tracking
-- **Key Operations**: `chunk_file()`, `generate_tasks()`, `create_progress_tracker()`
-
-#### 6. Progress Management System
-- **Purpose**: Tracks analysis progress across all files and chunks
-- **Responsibilities**: Update completion status, calculate progress percentages, prevent manual editing
-- **Key Operations**: `update_progress()`, `get_completion_status()`, `validate_integrity()`
-
-#### 7. Content Analysis Engine
-- **Purpose**: Processes content chunks to extract Rust library concepts
-- **Responsibilities**: Filter relevant content, identify library opportunities, extract technical details
-- **Key Operations**: `analyze_chunk()`, `filter_relevance()`, `extract_concepts()`
-
-#### 8. Scoring System
-- **Purpose**: Evaluates library concepts on three dimensions (PMF, Testing, Differentiation)
-- **Responsibilities**: Apply scoring criteria, validate scores, maintain consistency
-- **Key Operations**: `score_concept()`, `validate_scores()`, `apply_criteria()`
-
-#### 9. Results Compilation Engine
-- **Purpose**: Aggregates analysis results and prepares for ranking
-- **Responsibilities**: Collect scored concepts, merge results, prepare datasets
-- **Key Operations**: `compile_results()`, `merge_findings()`, `prepare_dataset()`
-
-#### 10. Ranking and Output System
-- **Purpose**: Ranks concepts and generates final reports
-- **Responsibilities**: Sort by scores, categorize by ranges, generate reports
-- **Key Operations**: `rank_concepts()`, `categorize_scores()`, `generate_report()`
+1. **Research Lot Manager**: Handles file organization, deduplication, and directory structure
+2. **Content Analysis Engine**: Processes 1000-line chunks and extracts library concepts
+3. **Three-Dimensional Scoring System**: Evaluates concepts on PMF, Testing, and Differentiation
+4. **Progress Tracking System**: Terminal-based progress monitoring and validation
+5. **Results Synthesizer**: Compiles and ranks discovered concepts
+6. **Quality Assurance Module**: Validates analysis integrity and completeness
 
 ## Components and Interfaces
 
-### Core Data Models
+### Research Lot Manager
 
-#### ResearchLot
-```rust
-struct ResearchLot {
-    id: String,
-    version: String, // SOPv1, SOPv2, etc.
-    created_at: DateTime<Utc>,
-    base_path: PathBuf,
-    status: LotStatus,
-    file_counts: FileInventory,
-}
+**Purpose**: Organizes raw research content into structured, analyzable format
 
-enum LotStatus {
-    Created,
-    Organized,
-    Analyzing,
-    Complete,
-}
+**Key Interfaces**:
+- `organize_research_lot(lot_number: u32) -> Result<LotStructure, Error>`
+- `detect_duplicates(input_path: &Path) -> Result<DuplicationReport, Error>`
+- `convert_to_txt(file_path: &Path) -> Result<PathBuf, Error>`
+- `validate_organization(lot_path: &Path) -> Result<ValidationReport, Error>`
 
-struct FileInventory {
-    total_files: usize,
-    txt_files: usize,
-    non_txt_files: usize,
-    duplicates_removed: usize,
-}
-```
+**Responsibilities**:
+- Create standard directory structure (TxtInput##/, NonTxtInput##/, Progress##/, Output##/, Duplicates##/)
+- Convert diverse file formats to standardized .txt with naming convention
+- Perform MD5-based duplicate detection and removal
+- Generate file statistics and organization reports
 
-#### ContentChunk
-```rust
-struct ContentChunk {
-    file_path: PathBuf,
-    start_line: usize,
-    end_line: usize,
-    content: String,
-    analysis_status: ChunkStatus,
-    concepts_found: Vec<LibraryConcept>,
-}
+### Content Analysis Engine
 
-enum ChunkStatus {
-    Pending,
-    Analyzing,
-    Complete,
-    Skipped, // For irrelevant content
-}
-```
+**Purpose**: Systematically processes content in manageable chunks to extract library concepts
 
-#### LibraryConcept
-```rust
-struct LibraryConcept {
-    name: String,
-    description: String,
-    source_file: PathBuf,
-    source_lines: (usize, usize),
-    scores: ConceptScores,
-    category: ConceptCategory,
-}
+**Key Interfaces**:
+- `analyze_chunk(file_path: &Path, start_line: usize, end_line: usize) -> Result<ChunkAnalysis, Error>`
+- `filter_relevance(content: &str) -> ContentRelevance`
+- `extract_concepts(relevant_content: &str) -> Vec<LibraryConcept>`
+- `classify_content_domain(content: &str) -> TechnologyDomain`
 
-struct ConceptScores {
-    pmf_probability: u8, // 1-10
-    ease_of_testing: u8, // 1-10
-    differentiation_potential: u8, // 1-10
-}
+**Responsibilities**:
+- Process files in 1000-line chunks for systematic coverage
+- Filter programming-relevant content from non-technical material
+- Extract potential library concepts with detailed descriptions
+- Categorize content by technology domain (React, WASM/Rust, etc.)
 
-enum ConceptCategory {
-    SystemsProgramming,
-    DeveloperTools,
-    PerformanceOptimization,
-    WebArchitecture,
-    DatabaseTools,
-    SecurityTools,
-    BuildSystems,
-    ConcurrencyTools,
-}
-```
+### Three-Dimensional Scoring System
 
-### Key Interfaces
+**Purpose**: Evaluates library concepts on critical success dimensions
 
-#### FileProcessor Trait
-```rust
-trait FileProcessor {
-    fn can_process(&self, file_path: &Path) -> bool;
-    fn convert_to_txt(&self, input: &Path, output: &Path) -> Result<(), ProcessingError>;
-    fn get_output_name(&self, input: &Path) -> String;
-}
-```
+**Key Interfaces**:
+- `score_pmf_probability(concept: &LibraryConcept) -> Score`
+- `score_testing_ease(concept: &LibraryConcept) -> Score`
+- `score_differentiation_potential(concept: &LibraryConcept) -> Score`
+- `validate_scores(concept: &ScoredConcept) -> Result<(), ValidationError>`
 
-#### ContentAnalyzer Trait
-```rust
-trait ContentAnalyzer {
-    fn is_relevant(&self, content: &str) -> bool;
-    fn extract_concepts(&self, chunk: &ContentChunk) -> Vec<LibraryConcept>;
-    fn score_concept(&self, concept: &LibraryConcept) -> ConceptScores;
-}
-```
+**Scoring Criteria**:
 
-#### ProgressTracker Trait
-```rust
-trait ProgressTracker {
-    fn update_chunk_status(&mut self, chunk_id: &str, status: ChunkStatus) -> Result<(), TrackingError>;
-    fn get_completion_percentage(&self) -> f64;
-    fn get_remaining_chunks(&self) -> Vec<String>;
-    fn validate_integrity(&self) -> Result<(), ValidationError>;
-}
-```
+**PMF Probability (1-10)**:
+- 9-10: Critical widespread pain points, developers actively searching
+- 7-8: Common problems with clear market demand
+- 5-6: Nice-to-have solutions for niche audiences
+- 1-4: Limited market need or novelty
+
+**Ease of Testing (1-10)**:
+- 9-10: Deterministic behavior, clear I/O, comprehensive test coverage possible
+- 7-8: Testable with setup, manageable complexity
+- 5-6: Testing possible but complex/integration-heavy
+- 1-4: Difficult to test reliably, non-deterministic
+
+**Differentiation Potential (1-10)**:
+- 9-10: Truly innovative, no direct competitors, 10x improvement
+- 7-8: Clear advantages, unique features/approaches
+- 5-6: Incremental improvements over existing solutions
+- 1-4: Me-too products, crowded space
+
+### Progress Tracking System
+
+**Purpose**: Terminal-based progress monitoring with data integrity guarantees
+
+**Key Interfaces**:
+- `update_chunk_status(file: &str, chunk: usize, status: ChunkStatus) -> Result<(), Error>`
+- `get_completion_stats() -> CompletionStats`
+- `validate_progress_integrity() -> Result<IntegrityReport, Error>`
+- `generate_repository_status() -> RepositoryStatus`
+
+**Terminal Commands Integration**:
+- `find ResearchLot##/TxtInput##/ -name "*.txt" | wc -l` for file counting
+- `grep -c "\[x\]" Progress##/use-case-analysis.md` for completed chunks
+- `grep -c "\[ \]" Progress##/use-case-analysis.md` for remaining chunks
+- `./SOP/tree-with-wc.sh` for comprehensive repository monitoring
+
+### Results Synthesizer
+
+**Purpose**: Compiles and ranks all discovered library concepts
+
+**Key Interfaces**:
+- `compile_use_cases(lot_path: &Path) -> Result<Vec<UseCaseEntry>, Error>`
+- `rank_concepts(concepts: Vec<ScoredConcept>) -> RankedList`
+- `categorize_by_domain(concepts: &[ScoredConcept]) -> DomainCategories`
+- `generate_final_report(ranked_concepts: &RankedList) -> FinalReport`
+
+**Output Structure**:
+- Comprehensive use case catalog with 5-line descriptions
+- Parallel analysis showing cross-domain similarities
+- Technology domain categorization
+- Strategic recommendations for development priorities
 
 ## Data Models
 
-### File System Structure
+### Core Data Structures
+
+```rust
+#[derive(Debug, Clone)]
+pub struct ResearchLot {
+    pub number: u32,
+    pub base_path: PathBuf,
+    pub structure: LotStructure,
+    pub statistics: LotStatistics,
+}
+
+#[derive(Debug, Clone)]
+pub struct LotStructure {
+    pub txt_input: PathBuf,
+    pub non_txt_input: PathBuf,
+    pub progress: PathBuf,
+    pub output: PathBuf,
+    pub duplicates: PathBuf,
+}
+
+#[derive(Debug, Clone)]
+pub struct LibraryConcept {
+    pub id: String,
+    pub title: String,
+    pub description: String,
+    pub domain: TechnologyDomain,
+    pub source_file: String,
+    pub source_lines: (usize, usize),
+    pub parallel_analysis: Vec<String>,
+}
+
+#[derive(Debug, Clone)]
+pub struct ScoredConcept {
+    pub concept: LibraryConcept,
+    pub pmf_score: Score,
+    pub testing_score: Score,
+    pub differentiation_score: Score,
+    pub combined_score: f64,
+    pub scoring_rationale: ScoringRationale,
+}
+
+#[derive(Debug, Clone)]
+pub struct Score {
+    pub value: u8, // 1-10
+    pub reasoning: String,
+    pub confidence: f64, // 0.0-1.0
+}
+
+#[derive(Debug, Clone)]
+pub enum TechnologyDomain {
+    ReactEcosystem,
+    WasmRustPerformance,
+    ProgrammingLanguages,
+    RuntimeSystems,
+    ZigPatterns,
+    SystemsProgramming,
+    DeveloperTools,
+    Other(String),
+}
+
+#[derive(Debug, Clone)]
+pub enum ContentRelevance {
+    HighlyRelevant,
+    ModeratelyRelevant,
+    LowRelevance,
+    Irrelevant(String), // reason for irrelevance
+}
+
+#[derive(Debug, Clone)]
+pub struct ChunkAnalysis {
+    pub file_path: PathBuf,
+    pub chunk_range: (usize, usize),
+    pub relevance: ContentRelevance,
+    pub extracted_concepts: Vec<LibraryConcept>,
+    pub analysis_notes: String,
+}
 ```
-ResearchLot##/
-├── TxtInput##/           # Analysis-ready .txt files
-├── NonTxtInput##/        # Original files preserved
-├── Progress##/           # Tracking files (use-case-analysis.md)
-├── Output##/            # Results (use-case-YYYYMM.md)
-└── Duplicates##/        # Moved duplicate files
-```
 
-### Progress Tracking Format
-```markdown
-# Use Case Analysis Progress
+### Progress Tracking Models
 
-## Summary
-- Total Files: 111
-- Completed Chunks: 45
-- Remaining Chunks: 67
-- Progress: 40.2%
+```rust
+#[derive(Debug, Clone)]
+pub struct CompletionStats {
+    pub total_files: usize,
+    pub completed_files: usize,
+    pub total_chunks: usize,
+    pub completed_chunks: usize,
+    pub completion_percentage: f64,
+    pub estimated_remaining_time: Option<Duration>,
+}
 
-## File Analysis
-#### filename.txt (2500 lines - Systems Programming)
-- [x] Lines 1-1000: Rust memory management patterns
-- [x] Lines 1001-2000: Performance optimization techniques  
-- [ ] Lines 2001-2500: Concurrency patterns
-```
+#[derive(Debug, Clone)]
+pub enum ChunkStatus {
+    NotStarted,
+    InProgress,
+    Completed,
+    Skipped(String), // reason for skipping
+}
 
-### Output Data Format
-```markdown
-# Rust Library Concepts - September 2025
-
-## High Priority (Score 8-10)
-### rust-memory-profiler (PMF: 9, Testing: 8, Diff: 9)
-- **Description**: Real-time memory usage profiler for Rust applications
-- **Source**: performance-analysis.txt:1250-1300
-- **Market Need**: Critical for production debugging
-
-## Medium Priority (Score 6-7)
-[Additional concepts...]
+#[derive(Debug, Clone)]
+pub struct RepositoryStatus {
+    pub total_files: usize,
+    pub file_breakdown: HashMap<String, usize>, // directory -> count
+    pub content_statistics: ContentStats,
+    pub integrity_status: IntegrityStatus,
+}
 ```
 
 ## Error Handling
 
 ### Error Categories
 
-#### FileSystemError
-- Directory creation failures
-- File access permission issues
-- Disk space limitations
-- Path resolution problems
-
-#### ConversionError
-- Unsupported file formats
-- Corrupted input files
-- Encoding issues
-- Large file handling
-
-#### AnalysisError
-- Content parsing failures
-- Scoring inconsistencies
-- Progress tracking corruption
-- Validation failures
+1. **File System Errors**: Missing files, permission issues, disk space
+2. **Content Processing Errors**: Malformed content, encoding issues
+3. **Scoring Validation Errors**: Invalid scores, missing rationale
+4. **Progress Tracking Errors**: Inconsistent state, corrupted tracking files
+5. **Terminal Command Errors**: Command execution failures, parsing errors
 
 ### Error Recovery Strategies
 
-#### Graceful Degradation
-- Skip corrupted files and continue processing
-- Provide partial results when complete analysis fails
-- Maintain progress even with individual chunk failures
+- **Graceful Degradation**: Continue processing other chunks if one fails
+- **Automatic Retry**: Retry failed operations with exponential backoff
+- **State Recovery**: Restore from last known good state
+- **Detailed Logging**: Comprehensive error context for debugging
+- **User Notification**: Clear error messages with suggested actions
 
-#### Validation and Rollback
-- Validate file integrity before processing
-- Checkpoint progress at regular intervals
-- Provide rollback capability for failed operations
+### Error Types
 
-#### User Feedback
-- Clear error messages with actionable guidance
-- Progress indicators during long-running operations
-- Detailed logging for debugging purposes
+```rust
+#[derive(Debug, thiserror::Error)]
+pub enum DiscoveryError {
+    #[error("File system error: {0}")]
+    FileSystem(#[from] std::io::Error),
+    
+    #[error("Content processing error: {message}")]
+    ContentProcessing { message: String },
+    
+    #[error("Scoring validation error: {concept_id} - {issue}")]
+    ScoringValidation { concept_id: String, issue: String },
+    
+    #[error("Progress tracking error: {0}")]
+    ProgressTracking(String),
+    
+    #[error("Terminal command error: {command} - {error}")]
+    TerminalCommand { command: String, error: String },
+    
+    #[error("Data integrity error: {0}")]
+    DataIntegrity(String),
+}
+```
 
 ## Testing Strategy
 
-### Unit Testing Approach
+### Unit Testing
 
-#### Component Isolation
-- Mock file system operations for deterministic testing
-- Test each scoring dimension independently
-- Validate progress tracking accuracy
+**Content Analysis Engine**:
+- Test chunk processing with various content types
+- Validate concept extraction accuracy
+- Test relevance filtering with edge cases
+- Verify domain classification correctness
 
-#### Test Data Management
-- Create synthetic research lots with known content
-- Use controlled duplicate scenarios
-- Test with various file formats and sizes
+**Scoring System**:
+- Test scoring algorithms with known good/bad examples
+- Validate score consistency across similar concepts
+- Test edge cases and boundary conditions
+- Verify scoring rationale generation
+
+**Progress Tracking**:
+- Test terminal command integration
+- Validate progress calculation accuracy
+- Test state persistence and recovery
+- Verify integrity checking
 
 ### Integration Testing
 
-#### End-to-End Workflows
-- Complete research lot processing pipeline
-- Multi-lot scenario testing
-- Progress persistence across sessions
+**End-to-End Workflow**:
+- Process complete research lot from organization to synthesis
+- Validate data flow between components
+- Test error handling and recovery
+- Verify output quality and completeness
 
-#### Performance Testing
-- Large file handling (>10MB files)
-- High file count scenarios (>1000 files)
-- Memory usage optimization validation
+**Terminal Integration**:
+- Test all SOPv1 terminal commands
+- Validate file counting accuracy
+- Test progress monitoring commands
+- Verify repository status reporting
 
-### Acceptance Testing
+### Performance Testing
 
-#### SOPv1 Compliance
-- Verify adherence to terminal-only execution requirement
-- Validate scoring criteria implementation
-- Confirm output format compliance
+**Scalability**:
+- Test with large research lots (50,000+ lines)
+- Measure processing time per chunk
+- Test memory usage with large files
+- Validate concurrent processing capabilities
 
-#### User Workflow Testing
-- Research lot creation and organization
-- Analysis progress tracking
-- Results compilation and ranking
+**Quality Assurance**:
+- Test scoring consistency across multiple runs
+- Validate concept extraction reproducibility
+- Test duplicate detection accuracy
+- Verify data integrity maintenance
 
-### Test Automation
+### Test Data Strategy
 
-#### Continuous Integration
-- Automated test suite execution
-- Performance regression detection
-- Cross-platform compatibility testing
+**Synthetic Test Data**:
+- Create controlled content samples for each domain
+- Generate edge cases for scoring validation
+- Create malformed content for error testing
+- Build regression test suites
 
-#### Test Data Generation
-- Synthetic content generation for testing
-- Automated duplicate creation for deduplication testing
-- Score validation with known good examples
+**Real Data Validation**:
+- Use ResearchLot01 as reference implementation
+- Validate against known good results
+- Test with diverse content types
+- Verify methodology compliance
+
+This design provides a robust, scalable foundation for systematic Rust library discovery while maintaining the rigor and terminal-based approach specified in the SOPv1 methodology.
