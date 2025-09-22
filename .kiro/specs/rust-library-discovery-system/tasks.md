@@ -556,9 +556,9 @@ Medical/health, entertainment, non-technical research, personal development
     - [ ] 20.10 Lines 9001-10000: Content analysis needed
     - [ ] 20.11 Lines 10001-11000: Content analysis needed
     - [ ] 20.12 Lines 11001-11990: Content analysis needed
-  - [ ] Rust30020250814_from_json.txt (11,218 lines - 12 chunks)
-    - [ ] 20.13 Lines 1-1000: Content analysis needed
-    - [ ] 20.14 Lines 1001-2000: Content analysis needed
+  - [-] Rust30020250814_from_json.txt (11,218 lines - 12 chunks)
+    - [x] 20.13 Lines 1-1000: Content analysis needed
+    - [-] 20.14 Lines 1001-2000: Content analysis needed
     - [ ] 20.15 Lines 2001-3000: Content analysis needed
     - [ ] 20.16 Lines 3001-4000: Content analysis needed
     - [ ] 20.17 Lines 4001-5000: Content analysis needed
@@ -964,9 +964,9 @@ Medical/health, entertainment, non-technical research, personal development
   - [ ] 39.2 Lines 1001-1098: Content analysis needed
   _Requirements: 1.1, 1.4, 2.4, 2.5_
 
-- [-] 40. Analyze Rust300 Rust OSS Project Planning_from_docx.txt (1,069 lines - 2 chunks)
-  - [ ] 40.1 Lines 1-1000: Content analysis needed
-  - [ ] 40.2 Lines 1001-1069: Content analysis needed
+- [x] 40. Analyze Rust300 Rust OSS Project Planning_from_docx.txt (1,069 lines - 2 chunks)
+  - [x] 40.1 Lines 1-1000: Content analysis needed
+  - [x] 40.2 Lines 1001-1069: Content analysis needed
   _Requirements: 1.1, 1.4, 2.4, 2.5_
 
 - [ ] 41. Analyze trun_8a68e63f9ca64238a07fe48dad156ba2_from_json.txt (957 lines - 1 chunk)
