@@ -7,7 +7,7 @@ The Rust Library Discovery System is a manual analysis methodology for systemati
 The design emphasizes terminal-based progress tracking, systematic chunk-by-chunk processing, and rigorous scoring criteria to ensure comprehensive coverage and quality results. The methodology is designed to be executed manually by a researcher following strict protocols.
 
 # IMPORTANT
-All use cases will be appended (nothing else -- not editing - just use echo command to send your summary as an append) in ResearchLot01/Output01/use-case-202509.md
+All use cases will be appended to ResearchLot01/Output01/use-case-202509.md using proper file operations
 
 
 ### Core Components
@@ -16,10 +16,7 @@ All use cases will be appended (nothing else -- not editing - just use echo comm
 2. **Content Filtering System**: Distinguishing programming-relevant from non-technical content
 3. **Concept Extraction Protocol**: Identifying and documenting potential library ideas
 4. **Three-Dimensional Scoring Framework**: Evaluating concepts on PMF, Testing, and Differentiation
-6. **Results Compilation System**: Aggregating findings into /home/amuldotexe/Desktop/before-I-go/.github/ResearchLot01/Output01/use-case-202509.md  - All use cases will be appended (nothing else -- not editing - just use echo command to send your summary as an append) in ResearchLot01/Output01/use-case-202509.md
-
-# IMPORTANT
-All use cases will be appended (nothing else -- not editing - just use echo command to send your summary as an append) in ResearchLot01/Output01/use-case-202509.md
+6. **Results Compilation System**: Aggregating findings into ResearchLot01/Output01/use-case-202509.md using proper file operations
 
 
 
@@ -98,7 +95,7 @@ All use cases will be appended (nothing else -- not editing - just use echo comm
 **Purpose**: Aggregate all findings into comprehensive use case catalog
 
 **Output Requirements**:
-- Append all findings to ResearchLot01/Output01/use-case-202509.md using echo commands
+- Append all findings to ResearchLot01/Output01/use-case-202509.md using proper file operations
 - Document each concept with 5-line descriptions
 - Include parallel analysis showing cross-domain similarities
 - Categorize by technology domain (React, WASM/Rust, etc.)
@@ -112,7 +109,7 @@ All use cases will be appended (nothing else -- not editing - just use echo comm
 
 
 ## FINAL OUTPUT place is ONLY 1 
-All use cases will be appended (nothing else -- not editing - just use echo command to send your summary as an append) in ResearchLot01/Output01/use-case-202509.md
+All use cases will be appended to ResearchLot01/Output01/use-case-202509.md using proper file operations
 
 
 ### Content Analysis Models

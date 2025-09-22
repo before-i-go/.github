@@ -40,16 +40,16 @@ This spec defines the systematic analysis work needed to complete discovering hi
 1. WHEN documenting a concept THEN I SHALL write a 5-line description capturing core problem, solution approach, technical features, use cases, and benefits
 2. WHEN adding parallel analysis THEN I SHALL show how similar concepts exist in other domains
 3. WHEN categorizing concepts THEN I SHALL group by technology domain (React Ecosystem, WASM/Rust Performance, Programming Languages, Runtime Systems, Zig Patterns, Systems Programming, Developer Tools)
-4. WHEN analysis is complete THEN I SHALL append findings to ResearchLot01/Output01/use-case-202509.md using echo commands only
+4. WHEN analysis is complete THEN I SHALL append findings to ResearchLot01/Output01/use-case-202509.md using proper file operations
 5. WHEN formatting results THEN I SHALL maintain the structured format with Domain, Source, Description, Scoring, and Parallel Analysis sections
 
 ### Requirement 4: Terminal-Based Results Compilation
 
-**User Story:** As a researcher, I want to compile all findings using only echo commands to append to the output file, so that I can maintain data integrity and avoid manual editing while building the comprehensive use case catalog.
+**User Story:** As a researcher, I want to compile all findings by appending to the output file, so that I can maintain data integrity and avoid manual editing while building the comprehensive use case catalog.
 
 #### Acceptance Criteria
 
-1. WHEN compiling results THEN I SHALL use only echo commands to append to ResearchLot01/Output01/use-case-202509.md
+1. WHEN compiling results THEN I SHALL append content to ResearchLot01/Output01/use-case-202509.md using proper file operations
 2. WHEN adding concepts THEN I SHALL never edit the file manually, only append new content
 3. WHEN structuring output THEN I SHALL include concept title, domain, source file/lines, 5-line description, scoring with reasoning, and parallel analysis
 4. WHEN categorizing THEN I SHALL organize findings by technology domains for strategic analysis
