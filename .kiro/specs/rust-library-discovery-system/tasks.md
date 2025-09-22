@@ -971,4 +971,3 @@ Medical/health, entertainment, non-technical research, personal development
     - [ ] Rust30020250815_minto_from_md.txt (124 lines - 1 chunk)
     - [ ] Rust30020250815_complete_from_md.txt (120 lines - 1 chunk)
     - [ ] Rust30020250815_from_md.txt (119 lines - 1 chunk)
-  _Requirements: 1.2, 1.3, 1.5_
