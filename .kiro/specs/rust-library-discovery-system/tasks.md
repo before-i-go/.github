@@ -46,13 +46,13 @@ Medical/health, entertainment, non-technical research, personal development
 
 ## File Analysis Tasks (111 Files Total)
 
-- [ ] 1. Analyze RustConcepts20250909.txt (52,171 lines - 53 chunks)
+- [-] 1. Analyze RustConcepts20250909.txt (52,171 lines - 53 chunks)
   - [x] 1.1 Lines 1-1000: Content analysis needed
   - [x] 1.2 Lines 1001-2000: Content analysis needed
   - [x] 1.3 Lines 2001-3000: Content analysis needed
   - [x] 1.4 Lines 3001-4000: Content analysis needed
-  - [ ] 1.1 Lines 4001-5000: Content analysis needed
-  - [ ] 1.2 Lines 5001-6000: Content analysis needed
+  - [x] 1.1 Lines 4001-5000: Content analysis needed
+  - [x] 1.2 Lines 5001-6000: Content analysis needed
   - [ ] 1.3 Lines 6001-7000: Content analysis needed
   - [ ] 1.4 Lines 7001-8000: Content analysis needed
   - [ ] 1.5 Lines 8001-9000: Content analysis needed
@@ -558,9 +558,9 @@ Medical/health, entertainment, non-technical research, personal development
     - [ ] 20.12 Lines 11001-11990: Content analysis needed
   - [-] Rust30020250814_from_json.txt (11,218 lines - 12 chunks)
     - [x] 20.13 Lines 1-1000: Content analysis needed
-    - [-] 20.14 Lines 1001-2000: Content analysis needed
-    - [ ] 20.15 Lines 2001-3000: Content analysis needed
-    - [ ] 20.16 Lines 3001-4000: Content analysis needed
+    - [x] 20.14 Lines 1001-2000: Content analysis needed
+    - [x] 20.15 Lines 2001-3000: Content analysis needed
+    - [x] 20.16 Lines 3001-4000: Content analysis needed
     - [ ] 20.17 Lines 4001-5000: Content analysis needed
     - [ ] 20.18 Lines 5001-6000: Content analysis needed
     - [ ] 20.19 Lines 6001-7000: Content analysis needed
