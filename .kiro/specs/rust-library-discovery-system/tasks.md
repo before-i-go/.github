@@ -102,10 +102,10 @@ Medical/health, entertainment, non-technical research, personal development
   - [ ] 1.49 Lines 52001-52171: Content analysis needed
   _Requirements: 1.1, 1.4, 2.1, 2.2, 2.3_
 
-- [ ] 2. Analyze trun_7335e17607c24192bb54abdd78a1cd59_from_json.txt (31,209 lines - 32 chunks)
-  - [ ] 2.1 Lines 1-1000: Content analysis needed
-  - [ ] 2.2 Lines 1001-2000: Content analysis needed
-  - [ ] 2.3 Lines 2001-3000: Content analysis needed
+- [-] 2. Analyze trun_7335e17607c24192bb54abdd78a1cd59_from_json.txt (31,209 lines - 32 chunks)
+  - [x] 2.1 Lines 1-1000: Content analysis needed
+  - [x] 2.2 Lines 1001-2000: Content analysis needed
+  - [x] 2.3 Lines 2001-3000: Content analysis needed
   - [ ] 2.4 Lines 3001-4000: Content analysis needed
   - [ ] 2.5 Lines 4001-5000: Content analysis needed
   - [ ] 2.6 Lines 5001-6000: Content analysis needed
@@ -167,8 +167,8 @@ Medical/health, entertainment, non-technical research, personal development
   - [ ] 3.27 Lines 26001-26264: Content analysis needed
   _Requirements: 1.1, 1.4, 2.4, 2.5_
 
-- [ ] 4. Analyze that-in-rust-parseltongue-8a5edab282632443 (1).txt (25,165 lines - 26 chunks)
-  - [ ] 4.1 Lines 1-1000: Content analysis needed
+- [-] 4. Analyze that-in-rust-parseltongue-8a5edab282632443 (1).txt (25,165 lines - 26 chunks)
+  - [-] 4.1 Lines 1-1000: Content analysis needed
   - [ ] 4.2 Lines 1001-2000: Content analysis needed
   - [ ] 4.3 Lines 2001-3000: Content analysis needed
   - [ ] 4.4 Lines 3001-4000: Content analysis needed

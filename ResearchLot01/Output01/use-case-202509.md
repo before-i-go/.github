@@ -3548,3 +3548,19 @@ dditional Analysis Results from Rust30020250814_from_json.txt (Lines 2001-3000)
 - Differentiation: 8/10 - Miri exists but this would provide more targeted, production-ready validation tooling
 
 **Parallel Analysis**: Similar to AddressSanitizer for C/C++, Valgrind for memory debugging, but specifically designed for Rust's ownership model
+
+## Analysis Results - trun_7335e17607c24192bb54abdd78a1cd59_from_json.txt
+
+### Chunk 2.1 (Lines 1-1000): SKIPPED
+**Reason**: Medical/health research content focused on yoga, meditation, and clinical trials. Content covers biomedical frameworks, healthcare integration, and therapeutic outcomes - not programming-focused material suitable for Rust library development.
+
+**Content Summary**: Comprehensive thesis on ancient Indian practices (Yoga, Pranayama, Yoga Nidra) and their validation in Western medicine through clinical trials and systematic reviews.
+
+### Chunk 2.2 (Lines 1001-2000): SKIPPED
+**Reason**: Continuation of medical/health research content focused on clinical trials, autonomic nervous system mechanisms, and health outcomes. Content covers research methodologies, biomarkers, and therapeutic outcomes - not programming-focused material suitable for Rust library development.
+
+**Content Summary**: Research methodologies for yoga studies, autonomic nervous system mechanisms (HRV, cortisol), sleep improvement outcomes, and clinical trial design considerations.### 
+Chunk 2.3 (Lines 2001-3000): SKIPPED
+**Reason**: Continuation of medical/health research content focused on safety profiles, contraindications, methodological critiques, healthcare integration, and economic evaluations. Content covers clinical guidelines, adverse events, cost-effectiveness analyses - not programming-focused material suitable for Rust library development.
+
+**Content Summary**: Safety considerations for yoga practices, contraindications for clinical conditions, methodological best practices for research, healthcare system integration, and economic value analyses.
