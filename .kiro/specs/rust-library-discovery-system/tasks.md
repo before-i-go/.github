@@ -833,14 +833,14 @@ Medical/health, entertainment, non-technical research, personal development
     - [ ] 26.6 Lines 5001-6000: Content analysis needed
     - [ ] 26.7 Lines 6001-7000: Content analysis needed
     - [ ] 26.8 Lines 7001-7067: Content analysis needed
-  - [-] trun_e3b2d38ad1414cbb93333a7058ca7728_from_json.txt (6,887 lines - 7 chunks)
+  - [x] trun_e3b2d38ad1414cbb93333a7058ca7728_from_json.txt (6,887 lines - 7 chunks)
     - [x] 26.9 Lines 1-1000: Content analysis needed
     - [x] 26.10 Lines 1001-2000: Content analysis needed
     - [x] 26.11 Lines 2001-3000: Content analysis needed
     - [x] 26.12 Lines 3001-4000: Content analysis needed
     - [x] 26.13 Lines 4001-5000: Content analysis needed
-    - [-] 26.14 Lines 5001-6000: Content analysis needed
-    - [ ] 26.15 Lines 6001-6887: Content analysis needed
+    - [x] 26.14 Lines 5001-6000: Content analysis needed
+    - [x] 26.15 Lines 6001-6887: Content analysis needed
   - [ ] trun_d3115feeb76d407da9990a0df6219e51_from_json.txt (6,707 lines - 7 chunks)
     - [ ] 26.16 Lines 1-1000: Content analysis needed
     - [ ] 26.17 Lines 1001-2000: Content analysis needed
