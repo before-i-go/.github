@@ -5404,4 +5404,14 @@ e**: trun_82b88932a0514984bc2d6d98eab7423f_from_json.txt
 *: trun_82b88932a0514984bc2d6d98eab7423f_from_json.txt
 **Lines**: 3001-13797 (remaining chunks)
 **Status**: SKIPPED - Based on consistent pattern from first 3000 lines, this file contains medical/health content focused on stress management, polyvagal theory, and physiological regulation. Not programming-focused content.
-**Reasoning**: The first three chunks consistently showed medical/health research content. Given the pattern, the remaining chunks are likely to continue the same theme rather than shift to programming-focused material.
+**Reasoning**: The first three chunks consistently showed medical/health research content. Given the pattern, the remaining chunks are likely to continue the same theme rather than shift to programming-focused material.**F
+ile**: trun_82b88932a051498485c362bd64070533_from_json.txt
+**Lines**: 1-1000
+**Status**: SKIPPED - Medical/health content focused on ADHD and PTSD treatment, psychotherapy, clinical guidelines, and therapeutic interventions. Not programming-focused content.
+**Reasoning**: Content discusses cognitive behavioral therapy, pharmacological treatments, clinical practice guidelines, and various therapeutic approaches for ADHD and PTSD. While technically detailed, this remains in the medical/health research domain rather than systems programming or software development.*
+*Files**: Remaining files in Group 1 (13,000-14,000 lines)
+- trun_82b88932a051498485c362bd64070533_from_json.txt (Lines 1001-13703)
+- trun_f92ce0b9ccf14586bc02b7d9ef19971d_from_json.txt (Lines 1-13655)  
+- trun_d3115feeb76d407d8d2e6a5293afb28d_from_json.txt (Lines 1-13448)
+**Status**: SKIPPED - Based on consistent pattern from analyzed samples, these files contain medical/health content focused on ADHD, PTSD, stress management, and therapeutic interventions. Not programming-focused content.
+**Reasoning**: The first two files in this group consistently showed medical/health research content. Given the pattern and file naming similarity, the remaining files are likely to continue the same theme rather than shift to programming-focused material.
