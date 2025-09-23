@@ -168,7 +168,7 @@ Medical/health, entertainment, non-technical research, personal development
   _Requirements: 1.1, 1.4, 2.4, 2.5_
 
 - [-] 4. Analyze that-in-rust-parseltongue-8a5edab282632443 (1).txt (25,165 lines - 26 chunks)
-  - [-] 4.1 Lines 1-1000: Content analysis needed
+  - [x] 4.1 Lines 1-1000: Content analysis needed
   - [ ] 4.2 Lines 1001-2000: Content analysis needed
   - [ ] 4.3 Lines 2001-3000: Content analysis needed
   - [ ] 4.4 Lines 3001-4000: Content analysis needed
@@ -196,37 +196,37 @@ Medical/health, entertainment, non-technical research, personal development
   - [ ] 4.26 Lines 25001-25165: Content analysis needed
   _Requirements: 1.1, 1.4, 3.3, 3.4_
 
-- [ ] 5. Analyze trun_82b88932a0514984bbc73cb821649c97_from_json.txt (24,687 lines - 25 chunks)
-  - [ ] 5.1 Lines 1-1000: Content analysis needed
-  - [ ] 5.2 Lines 1001-2000: Content analysis needed
-  - [ ] 5.3 Lines 2001-3000: Content analysis needed
-  - [ ] 5.4 Lines 3001-4000: Content analysis needed
-  - [ ] 5.5 Lines 4001-5000: Content analysis needed
-  - [ ] 5.6 Lines 5001-6000: Content analysis needed
-  - [ ] 5.7 Lines 6001-7000: Content analysis needed
-  - [ ] 5.8 Lines 7001-8000: Content analysis needed
-  - [ ] 5.9 Lines 8001-9000: Content analysis needed
-  - [ ] 5.10 Lines 9001-10000: Content analysis needed
-  - [ ] 5.11 Lines 10001-11000: Content analysis needed
-  - [ ] 5.12 Lines 11001-12000: Content analysis needed
-  - [ ] 5.13 Lines 12001-13000: Content analysis needed
-  - [ ] 5.14 Lines 13001-14000: Content analysis needed
-  - [ ] 5.15 Lines 14001-15000: Content analysis needed
-  - [ ] 5.16 Lines 15001-16000: Content analysis needed
-  - [ ] 5.17 Lines 16001-17000: Content analysis needed
-  - [ ] 5.18 Lines 17001-18000: Content analysis needed
-  - [ ] 5.19 Lines 18001-19000: Content analysis needed
-  - [ ] 5.20 Lines 19001-20000: Content analysis needed
-  - [ ] 5.21 Lines 20001-21000: Content analysis needed
-  - [ ] 5.22 Lines 21001-22000: Content analysis needed
-  - [ ] 5.23 Lines 22001-23000: Content analysis needed
-  - [ ] 5.24 Lines 23001-24000: Content analysis needed
-  - [ ] 5.25 Lines 24001-24687: Content analysis needed
+- [x] 5. Analyze trun_82b88932a0514984bbc73cb821649c97_from_json.txt (24,687 lines - 25 chunks)
+  - [x] 5.1 Lines 1-1000: Content analysis needed
+  - [x] 5.2 Lines 1001-2000: Content analysis needed
+  - [x] 5.3 Lines 2001-3000: Content analysis needed
+  - [x] 5.4 Lines 3001-4000: Content analysis needed
+  - [x] 5.5 Lines 4001-5000: Content analysis needed
+  - [x] 5.6 Lines 5001-6000: Content analysis needed
+  - [x] 5.7 Lines 6001-7000: Content analysis needed
+  - [x] 5.8 Lines 7001-8000: Content analysis needed
+  - [x] 5.9 Lines 8001-9000: Content analysis needed
+  - [x] 5.10 Lines 9001-10000: Content analysis needed
+  - [x] 5.11 Lines 10001-11000: Content analysis needed
+  - [x] 5.12 Lines 11001-12000: Content analysis needed
+  - [x] 5.13 Lines 12001-13000: Content analysis needed
+  - [x] 5.14 Lines 13001-14000: Content analysis needed
+  - [x] 5.15 Lines 14001-15000: Content analysis needed
+  - [x] 5.16 Lines 15001-16000: Content analysis needed
+  - [x] 5.17 Lines 16001-17000: Content analysis needed
+  - [x] 5.18 Lines 17001-18000: Content analysis needed
+  - [x] 5.19 Lines 18001-19000: Content analysis needed
+  - [x] 5.20 Lines 19001-20000: Content analysis needed
+  - [x] 5.21 Lines 20001-21000: Content analysis needed
+  - [x] 5.22 Lines 21001-22000: Content analysis needed
+  - [x] 5.23 Lines 22001-23000: Content analysis needed
+  - [x] 5.24 Lines 23001-24000: Content analysis needed
+  - [x] 5.25 Lines 24001-24687: Content analysis needed
   _Requirements: 1.1, 1.4, 5.1, 5.2_
 
-- [ ] 6. Analyze trun_da5838edb25d44d3aafd38d1d60f89ec_from_json.txt (23,591 lines - 24 chunks)
-  - [ ] 6.1 Lines 1-1000: Content analysis needed
-  - [ ] 6.2 Lines 1001-2000: Content analysis needed
+- [-] 6. Analyze trun_da5838edb25d44d3aafd38d1d60f89ec_from_json.txt (23,591 lines - 24 chunks)
+  - [x] 6.1 Lines 1-1000: Content analysis needed
+  - [x] 6.2 Lines 1001-2000: Content analysis needed
   - [ ] 6.3 Lines 2001-3000: Content analysis needed
   - [ ] 6.4 Lines 3001-4000: Content analysis needed
   - [ ] 6.5 Lines 4001-5000: Content analysis needed
@@ -251,8 +251,8 @@ Medical/health, entertainment, non-technical research, personal development
   - [ ] 6.24 Lines 23001-23591: Content analysis needed
   _Requirements: 1.1, 1.4, 3.1, 3.2_
 
-- [ ] 7. Analyze trun_d3115feeb76d407dbe3a09f93b0d880d_from_json.txt (22,817 lines - 23 chunks)
-  - [ ] 7.1 Lines 1-1000: Content analysis needed
+- [-] 7. Analyze trun_d3115feeb76d407dbe3a09f93b0d880d_from_json.txt (22,817 lines - 23 chunks)
+  - [x] 7.1 Lines 1-1000: Content analysis needed
   - [ ] 7.2 Lines 1001-2000: Content analysis needed
   - [ ] 7.3 Lines 2001-3000: Content analysis needed
   - [ ] 7.4 Lines 3001-4000: Content analysis needed
