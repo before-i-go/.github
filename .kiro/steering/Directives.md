@@ -42,3 +42,29 @@ All use cases will be appended to ResearchLot01/Output01/use-case-202509.md usin
 
 
 
+
+## METHODOLOGY UPDATE: LIBRARY CONCEPT EXTRACTION THRESHOLD
+
+### **REVISED SCORING CRITERIA**
+- **Minimum Threshold**: 5/10 on ALL three dimensions (reduced from 8/10)
+- **Three-Dimensional Framework**: PMF Probability, Ease of Testing, Differentiation Potential
+- **Content Filter**: Systems programming, developer tools, performance optimization only
+- **Documentation**: 5-liner descriptions + parallel analysis
+
+### **RATIONALE FOR THRESHOLD ADJUSTMENT**
+- **Broader Discovery**: Lower threshold enables discovery of more library opportunities
+- **Incremental Value**: Concepts scoring 5-7/10 may have niche applications or serve as building blocks
+- **Market Reality**: Not all successful libraries need to score 8-10/10 across all dimensions
+- **Progress Optimization**: Prevents analysis stagnation on technical content with moderate opportunity
+
+### **QUALITY ASSURANCE**
+- **Documentation Standards**: 5-line descriptions remain mandatory
+- **Parallel Analysis**: Comparative analysis with existing solutions required
+- **Domain Filtering**: Still focused on systems programming and developer tools
+- **Progress Tracking**: Terminal-based verification and reporting maintained
+
+### **IMPLEMENTATION**
+- **Immediate Effect**: Applied to all future chunk analysis
+- **Retrospective**: Previous high-threshold analysis stands, new threshold going forward
+- **Monitoring**: Track quality and quantity of extracted concepts with new criteria
+
