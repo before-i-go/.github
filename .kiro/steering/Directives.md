@@ -1,5 +1,7 @@
 # Keep in mind during each action - task sub task
 
+## DO NOT CHEAT ON THE TASKS - do NOT MARK THEM COMPLETE BY SCRIPTS 
+
 ## LAYER 1: Scoring Framework
 
 ### Three-Dimensional Evaluation (1-10 scale)
