@@ -277,7 +277,7 @@ Medical/health, entertainment, non-technical research, personal development
   - [ ] 7.23 Lines 22001-22817: Content analysis needed
   _Requirements: 1.1, 1.4, 2.1, 2.2, 2.3_
 
-- [ ] 8. Analyze trun_8954c223ffc1494ab1803992104ff000_from_json.txt (20,594 lines - 21 chunks)
+- [-] 8. Analyze trun_8954c223ffc1494ab1803992104ff000_from_json.txt (20,594 lines - 21 chunks)
   - [ ] 8.1 Lines 1-1000: Content analysis needed
   - [ ] 8.2 Lines 1001-2000: Content analysis needed
   - [ ] 8.3 Lines 2001-3000: Content analysis needed
@@ -857,14 +857,14 @@ Medical/health, entertainment, non-technical research, personal development
     - [x] 26.27 Lines 4001-5000: Content analysis needed
     - [x] 26.28 Lines 5001-6000: Content analysis needed
     - [x] 26.29 Lines 6001-6361: Content analysis needed
-  - [-] trun_d84ae65ea9e442428af77fc6fb75ec4a_from_json.txt (6,061 lines - 7 chunks)
+  - [x] trun_d84ae65ea9e442428af77fc6fb75ec4a_from_json.txt (6,061 lines - 7 chunks)
     - [x] 26.30 Lines 1-1000: Content analysis needed
     - [x] 26.31 Lines 1001-2000: Content analysis needed
     - [x] 26.32 Lines 2001-3000: Content analysis needed
     - [x] 26.33 Lines 3001-4000: Content analysis needed
     - [x] 26.34 Lines 4001-5000: Content analysis needed
-    - [-] 26.35 Lines 5001-6000: Content analysis needed
-    - [ ] 26.36 Lines 6001-6061: Content analysis needed
+    - [x] 26.35 Lines 5001-6000: Content analysis needed
+    - [x] 26.36 Lines 6001-6061: Content analysis needed
   - [ ] Chat _ AIM Daemon_ Codebase Intelligence Design _ Yupp_from_html.txt (6,060 lines - 7 chunks)
     - [ ] 26.37 Lines 1-1000: Content analysis needed
     - [ ] 26.38 Lines 1001-2000: Content analysis needed
